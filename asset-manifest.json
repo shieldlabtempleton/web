@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.a224ce4c.css",
-    "main.js": "/web/static/js/main.6916970f.js",
+    "main.css": "/web/static/css/main.4dc0950d.css",
+    "main.js": "/web/static/js/main.a7bd7d25.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
+    "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
     "static/media/SHIELD.png": "/web/static/media/SHIELD.e07eb9f64fcfe6d68016.png",
     "static/media/1643408680791.jpeg": "/web/static/media/1643408680791.847f959c2062ec747981.jpeg",
     "static/media/DD_437x437.jpg": "/web/static/media/DD_437x437.fabd2c4540265d6bfd7f.jpg",
@@ -13,12 +14,12 @@
     "static/media/USF_Bellini.png": "/web/static/media/USF_Bellini.6d0ba09c94a4835d3ba4.png",
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
     "index.html": "/web/index.html",
-    "main.a224ce4c.css.map": "/web/static/css/main.a224ce4c.css.map",
-    "main.6916970f.js.map": "/web/static/js/main.6916970f.js.map",
+    "main.4dc0950d.css.map": "/web/static/css/main.4dc0950d.css.map",
+    "main.a7bd7d25.js.map": "/web/static/js/main.a7bd7d25.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a224ce4c.css",
-    "static/js/main.6916970f.js"
+    "static/css/main.4dc0950d.css",
+    "static/js/main.a7bd7d25.js"
   ]
 }
