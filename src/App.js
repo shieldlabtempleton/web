@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import SiteHeader from "./components/SiteHeader";
+import NavBar from "./components/NavBar";
+import "./App.css";
+import Wave from "./styles/Waves";
+import HomePage from "./components/HomePage";
+import PublicationsPage from "./components/PublicationsPage";
+import PeoplePage from "./components/PeoplePage";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import BackgroundEffects from "./components/BackgroundEffects";
+import ScrollToTop from "./components/ScrollToTop";
+import PersonProfile from "./components/PersonProfile";
+import ResearchPage from "./components/ResearchPage";
+import Collaborators from "./components/Collaborators";
+import Contact from "./components/Contact";
 
 function App() {
+  const [isOverWhite, setIsOverWhite] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ScrollToTop />
+      <BackgroundEffects />
+      <Wave isOverWhite={isOverWhite} setIsOverWhite={setIsOverWhite}></Wave>
+      <SiteHeader />
+      <NavBar isOverWhite={isOverWhite} />
+      <main style={{}}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/publications" element={<PublicationsPage />} />
+          <Route path="/research" element={<ResearchPage />} />
+          <Route path="/people" element={<PeoplePage />} />
+          <Route path="/people/:slug" element={<PersonProfile />} />
+          <Route path="/collaborators" element={<Collaborators />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
     </div>
   );
 }
