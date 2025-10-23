@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.4c9a2711.css",
+    "main.css": "/web/static/css/main.1803a817.css",
     "main.js": "/web/static/js/main.819ec8a3.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
@@ -14,12 +14,12 @@
     "static/media/USF_Bellini.png": "/web/static/media/USF_Bellini.6d0ba09c94a4835d3ba4.png",
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
     "index.html": "/web/index.html",
-    "main.4c9a2711.css.map": "/web/static/css/main.4c9a2711.css.map",
+    "main.1803a817.css.map": "/web/static/css/main.1803a817.css.map",
     "main.819ec8a3.js.map": "/web/static/js/main.819ec8a3.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c9a2711.css",
+    "static/css/main.1803a817.css",
     "static/js/main.819ec8a3.js"
   ]
 }
