@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web/static/css/main.c7027e1f.css",
-    "main.js": "/web/static/js/main.55da20fa.js",
+    "main.js": "/web/static/js/main.42bf3ed0.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/usf-backdrop2.jpg": "/web/static/media/usf-backdrop2.247f19787b38869ea9a9.jpg",
@@ -15,11 +15,11 @@
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
     "index.html": "/web/index.html",
     "main.c7027e1f.css.map": "/web/static/css/main.c7027e1f.css.map",
-    "main.55da20fa.js.map": "/web/static/js/main.55da20fa.js.map",
+    "main.42bf3ed0.js.map": "/web/static/js/main.42bf3ed0.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7027e1f.css",
-    "static/js/main.55da20fa.js"
+    "static/js/main.42bf3ed0.js"
   ]
 }
