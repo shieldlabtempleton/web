@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.4dc0950d.css",
-    "main.js": "/web/static/js/main.a7bd7d25.js",
+    "main.css": "/web/static/css/main.061d566f.css",
+    "main.js": "/web/static/js/main.ec3283ee.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
@@ -14,12 +14,12 @@
     "static/media/USF_Bellini.png": "/web/static/media/USF_Bellini.6d0ba09c94a4835d3ba4.png",
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
     "index.html": "/web/index.html",
-    "main.4dc0950d.css.map": "/web/static/css/main.4dc0950d.css.map",
-    "main.a7bd7d25.js.map": "/web/static/js/main.a7bd7d25.js.map",
+    "main.061d566f.css.map": "/web/static/css/main.061d566f.css.map",
+    "main.ec3283ee.js.map": "/web/static/js/main.ec3283ee.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4dc0950d.css",
-    "static/js/main.a7bd7d25.js"
+    "static/css/main.061d566f.css",
+    "static/js/main.ec3283ee.js"
   ]
 }
