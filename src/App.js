@@ -6,7 +6,7 @@ import HomePage from "./components/HomePage";
 import PublicationsPage from "./components/PublicationsPage";
 import PeoplePage from "./components/PeoplePage";
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import BackgroundEffects from "./components/BackgroundEffects";
 import ScrollToTop from "./components/ScrollToTop";
 import PersonProfile from "./components/PersonProfile";
@@ -23,7 +23,7 @@ function App() {
       <Wave isOverWhite={isOverWhite} setIsOverWhite={setIsOverWhite}></Wave>
       <SiteHeader />
       <NavBar isOverWhite={isOverWhite} />
-      <main style={{}}>
+      <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/publications" element={<PublicationsPage />} />

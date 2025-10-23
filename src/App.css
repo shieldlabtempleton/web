@@ -707,8 +707,8 @@
 
 .Profile-photo {
   background-color: lightgray;
-  height: 350px;
-  width: 350px;
+  height: 30vw;
+  width: 30vw;
   border-radius: 50%;
   object-fit: fill;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
@@ -988,6 +988,8 @@
     z-index: 1;
     gap: 0;
     height: 50px;
+    will-change: transform;
+    transform: translateZ(0), translate3d(0, 0, 0);
   }
 
   .Main-menu.bgshow {
@@ -1018,7 +1020,9 @@
     transition: top 0.3s ease-in-out;
     position: absolute;
     z-index: 0;
-    top: -450px;
+    top: -1000px;
+    backface-visibility: hidden;
+    contain: layout paint;
   }
 
   /* When toggle is open */
@@ -1061,6 +1065,7 @@
     margin: 3px auto;
     transition: all 0.3s ease-in-out;
     background-color: white;
+    cursor: pointer;
   }
 
   .Navbar-toggle:hover .bar {
