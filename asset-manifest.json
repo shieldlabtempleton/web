@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.9e20fa7c.css",
+    "main.css": "/web/static/css/main.dcf25961.css",
     "main.js": "/web/static/js/main.9838512e.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
@@ -19,12 +19,12 @@
     "static/media/heart.svg": "/web/static/media/heart.eca2d085a514754e663529860b794799.svg",
     "static/media/public-health.svg": "/web/static/media/public-health.46019f178db7b5b19055e3407ecf1362.svg",
     "index.html": "/web/index.html",
-    "main.9e20fa7c.css.map": "/web/static/css/main.9e20fa7c.css.map",
+    "main.dcf25961.css.map": "/web/static/css/main.dcf25961.css.map",
     "main.9838512e.js.map": "/web/static/js/main.9838512e.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e20fa7c.css",
+    "static/css/main.dcf25961.css",
     "static/js/main.9838512e.js"
   ]
 }
