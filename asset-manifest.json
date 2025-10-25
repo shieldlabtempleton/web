@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.51406430.css",
-    "main.js": "/web/static/js/main.9838512e.js",
+    "main.css": "/web/static/css/main.6410b706.css",
+    "main.js": "/web/static/js/main.2fc8c873.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
@@ -19,12 +19,12 @@
     "static/media/heart.svg": "/web/static/media/heart.eca2d085a514754e663529860b794799.svg",
     "static/media/public-health.svg": "/web/static/media/public-health.46019f178db7b5b19055e3407ecf1362.svg",
     "index.html": "/web/index.html",
-    "main.51406430.css.map": "/web/static/css/main.51406430.css.map",
-    "main.9838512e.js.map": "/web/static/js/main.9838512e.js.map",
+    "main.6410b706.css.map": "/web/static/css/main.6410b706.css.map",
+    "main.2fc8c873.js.map": "/web/static/js/main.2fc8c873.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51406430.css",
-    "static/js/main.9838512e.js"
+    "static/css/main.6410b706.css",
+    "static/js/main.2fc8c873.js"
   ]
 }
