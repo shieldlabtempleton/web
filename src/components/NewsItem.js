@@ -1,16 +1,23 @@
 import React from "react";
+import { FaAngleRight } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
-const NewsItem = ({ thumbnail, title, date }) => {
+const NewsItem = ({ thumbnail, title, date, slug, link }) => {
   return (
-    <button className="News-item-container">
+    <a href={link} className="News-item-container">
       <img src={thumbnail} className="News-thumbnail" alt="" />
       <div className="News-info-container">
-        <h2 className="News-title">{title}</h2>
+        <div className="News-title">
+          <h1>{title}</h1>
+        </div>
         <div className="News-date">{date}</div>
       </div>
       <div className="News-highlighter1" />
       <div className="News-highlighter2" />
-    </button>
+      <div className="News-item-arrow-container">
+        <FaAngleRight className="News-item-arrow" />
+      </div>
+    </a>
   );
 };
 

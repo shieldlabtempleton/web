@@ -4,8 +4,8 @@ import piphoto from "../assests/Templeton.png";
 import medicallogo from "../assests/medical-white-vertical-transparent.png";
 import bellinilogo from "../assests/Op1-Bellini-caicc-white-1c-rgb-h.png";
 import NewsItem from "./NewsItem";
-import news1thumbnail from "../assests/DD_437x437.jpg";
 import newsarticles from "./NewsArticles";
+import NewsSection from "./NewsSection";
 
 const HomePage = () => {
   return (
@@ -31,18 +31,18 @@ const HomePage = () => {
           </p>
           <ul className="horizontal-numbered-list">
             <li>
-              The development of new assessment tools that maximize data quality
-              (e.g., minimize human error, maximize compliance, while creating
-              tools appropriate for all independent of age, gender, cognitive
-              skill, etc.)
+              Developing new assessment tools that maximize data quality (e.g.,
+              making tools for all that minimize human error and maximize
+              compliance).
             </li>
             <li>
-              Addressing bias in current health technologies (e.g., how we
-              collect and analyze data, and how we build models)
+              Addressing bias in current health technologies (e.g., focusing on
+              how to collect and analyze data, and how models should be built).
             </li>
             <li>
-              The fusion of diverse sensor sources through machine learning
-              techniques
+              Fusing diverse sensor sources through machine learning to improve
+              diagnosis capability and identify condition-specific digital
+              biomarkers.
             </li>
           </ul>
         </div>
@@ -65,14 +65,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className="News-section">
-        <h1 className="News-header">News</h1>
-        <NewsItem
-          thumbnail={news1thumbnail}
-          title={newsarticles[0].title}
-          date={newsarticles[0].date}
-        />
-      </div>
+      <NewsSection newsarticles={newsarticles} />
     </div>
   );
 };

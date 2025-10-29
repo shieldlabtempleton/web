@@ -13,6 +13,8 @@ import PersonProfile from "./components/PersonProfile";
 import ResearchPage from "./components/ResearchPage";
 import Collaborators from "./components/Collaborators";
 import Contact from "./components/Contact";
+import NewsFullPage from "./components/NewsFullPage";
+import SiteFooter from "./components/SiteFooter";
 
 function App() {
   const [isOverWhite, setIsOverWhite] = useState(false);

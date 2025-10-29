@@ -1,4 +1,3 @@
-import usfbckdrp from "../assests/usf-backdrop2.jpg";
 import React, { useEffect, useState, useRef } from "react";
 
 function interpolatePath(d1, d2, t) {
@@ -77,7 +76,7 @@ function Wave({ children, isOverWhite, setIsOverWhite }) {
   const d = interpolatePath(newStartD, newEndD, scrollProgress);
 
   return (
-    <div style={{ position: "relative" }}>
+    <div className="Wave-design" style={{ position: "relative" }}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"

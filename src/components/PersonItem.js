@@ -9,12 +9,16 @@ const PersonItem = ({
   lastname,
   title,
   role,
+  bio,
   career,
   research,
+  researchfocus,
   education,
+  publications,
   teaching,
   service,
   prodev,
+  acheivements,
   email,
   linkedin,
 }) => {
@@ -23,7 +27,16 @@ const PersonItem = ({
       ? `/people/principal-investigator`
       : `/people/${firstname}-${lastname}`;
   return (
-    <div className="Person-container">
+    <div
+      className="Person-container"
+      id={
+        role === "pi"
+          ? "pi-photo"
+          : role === "grad-student"
+          ? "grad-student-photo"
+          : "alumni-photo"
+      }
+    >
       {role === "alumni" ? (
         <a
           href={linkedin}
@@ -37,6 +50,9 @@ const PersonItem = ({
               src={photo ? photo : defaultphoto}
               alt=""
             />
+            <p className="Person-name">
+              {title} {firstname} {middleinitial} {lastname}
+            </p>
           </button>
         </a>
       ) : (
@@ -49,12 +65,16 @@ const PersonItem = ({
             lastname,
             title,
             role,
+            bio,
             career,
             research,
+            researchfocus,
             education,
+            publications,
             teaching,
             service,
             prodev,
+            acheivements,
             email,
             linkedin,
           }}
@@ -66,12 +86,12 @@ const PersonItem = ({
               src={photo ? photo : defaultphoto}
               alt=""
             />
+            <p className="Person-name">
+              {title} {firstname} {middleinitial} {lastname}
+            </p>
           </button>
         </NavLink>
       )}
-      <p className="Person-name">
-        {title} {firstname} {middleinitial} {lastname}
-      </p>
     </div>
   );
 };

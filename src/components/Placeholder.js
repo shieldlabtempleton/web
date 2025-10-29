@@ -6,7 +6,7 @@ const Placeholder = () => {
     <div className="Placeholder">
       <img className="Placeholder-png" src={construction} alt="" />
       <h1 className="Placeholder-text">
-        This Page Is Currently Under Construction.
+        This Page Is Currently In Development
       </h1>
     </div>
   );

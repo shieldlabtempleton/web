@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import defaultphoto from "../assests/defaultuser.png";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa6";
+import ReactMarkdown from "react-markdown";
 
 const PersonProfile = () => {
   const location = useLocation();
@@ -55,6 +56,12 @@ const PersonProfile = () => {
             <p className="Profile-text">{person.research}</p>
           </div>
         ) : null}
+        {person.researchfocus ? (
+          <div className="Profile-section">
+            <h1 className="Profile-header">Research Focus</h1>
+            <p className="Profile-text">{person.researchfocus}</p>
+          </div>
+        ) : null}
         {person.education ? (
           <div className="Profile-section">
             <h1 className="Profile-header">Education</h1>
@@ -75,6 +82,18 @@ const PersonProfile = () => {
             </ul>
           </div>
         ) : null}
+        {person.publications ? (
+          <div className="Profile-section">
+            <h1 className="Profile-header">Publications</h1>
+            <ul className="Profile-text">
+              {person.publications.map((item, index) => (
+                <li key={index}>
+                  <ReactMarkdown>{item}</ReactMarkdown>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         {person.service ? (
           <div className="Profile-section">
             <h1 className="Profile-header">Service</h1>
@@ -90,6 +109,16 @@ const PersonProfile = () => {
             <h1 className="Profile-header">Professional Development</h1>
             <ul className="Profile-text">
               {person.prodev.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+        {person.acheivements ? (
+          <div className="Profile-section">
+            <h1 className="Profile-header">Acheivements</h1>
+            <ul className="Profile-text">
+              {person.acheivements.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
