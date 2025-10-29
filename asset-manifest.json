@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.6410b706.css",
-    "main.js": "/web/static/js/main.f41a3671.js",
+    "main.css": "/web/static/css/main.e7e2273b.css",
+    "main.js": "/web/static/js/main.ae37dde7.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
+    "static/media/Photo_of_Anika_Anjum.jpg": "/web/static/media/Photo_of_Anika_Anjum.969fac2010a07abfea28.jpg",
     "static/media/SHIELD.png": "/web/static/media/SHIELD.e07eb9f64fcfe6d68016.png",
     "static/media/1643408680791.jpeg": "/web/static/media/1643408680791.847f959c2062ec747981.jpeg",
     "static/media/DD_437x437.jpg": "/web/static/media/DD_437x437.fabd2c4540265d6bfd7f.jpg",
+    "static/media/tgh-logo.png": "/web/static/media/tgh-logo.9e87e470b99ef50fe5b4.png",
+    "static/media/medical-color-horizontal-transparent.png": "/web/static/media/medical-color-horizontal-transparent.6e66ef9daed66ffeaf3f.png",
     "static/media/medical-white-vertical-transparent.png": "/web/static/media/medical-white-vertical-transparent.9f75d594a0122921e089.png",
     "static/media/construction.png": "/web/static/media/construction.f28a217afa12e68ebb80.png",
+    "static/media/Op1-Bellini-caicc-green text-2c-rgb-h.png": "/web/static/media/Op1-Bellini-caicc-green text-2c-rgb-h.92fcd52644436c223e69.png",
+    "static/media/USF_Bellini.png": "/web/static/media/USF_Bellini.c962b9b01c38862c8d7b.png",
     "static/media/Op1-Bellini-caicc-white-1c-rgb-h.png": "/web/static/media/Op1-Bellini-caicc-white-1c-rgb-h.2b8fc80fe15e227bf6f6.png",
-    "static/media/USF_Bellini.png": "/web/static/media/USF_Bellini.6d0ba09c94a4835d3ba4.png",
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
     "static/media/cell.svg": "/web/static/media/cell.2c9957e7f6dc7cbb40ff1ce92e51584f.svg",
     "static/media/brain.svg": "/web/static/media/brain.8b2187729be3d2a6d40097a9c6a452e4.svg",
@@ -19,12 +23,12 @@
     "static/media/heart.svg": "/web/static/media/heart.eca2d085a514754e663529860b794799.svg",
     "static/media/public-health.svg": "/web/static/media/public-health.46019f178db7b5b19055e3407ecf1362.svg",
     "index.html": "/web/index.html",
-    "main.6410b706.css.map": "/web/static/css/main.6410b706.css.map",
-    "main.f41a3671.js.map": "/web/static/js/main.f41a3671.js.map",
+    "main.e7e2273b.css.map": "/web/static/css/main.e7e2273b.css.map",
+    "main.ae37dde7.js.map": "/web/static/js/main.ae37dde7.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6410b706.css",
-    "static/js/main.f41a3671.js"
+    "static/css/main.e7e2273b.css",
+    "static/js/main.ae37dde7.js"
   ]
 }
