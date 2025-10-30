@@ -79,6 +79,46 @@ const BackgroundEffects = () => {
 
     document.addEventListener("mousemove", handleMouseMove);
 
+    const handleClick = (e) => {
+      const clickX = (e.clientX / window.innerWidth) * 100;
+      const clickY = (e.clientY / window.innerHeight) * 100;
+
+      const numParticles = 20; // slightly more particles
+      const baseRadius = 10; // average spread distance
+
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+
+        const size = Math.random() * 4 + 2;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${clickX}%`;
+        particle.style.top = `${clickY}%`;
+        particle.style.opacity = "0.8";
+        particle.style.background = "#ffffff";
+        particlesContainer.appendChild(particle);
+
+        // Add randomness for a more rounded, organic burst
+        const angle = Math.random() * Math.PI * 2; // random direction
+        const radius = baseRadius * (0.5 + Math.random()); // variable distance
+
+        const offsetX = Math.cos(angle) * radius;
+        const offsetY = Math.sin(angle) * radius;
+
+        // Animate outward
+        setTimeout(() => {
+          particle.style.transition = "all 1s ease-out";
+          particle.style.left = `${clickX + offsetX}%`;
+          particle.style.top = `${clickY + offsetY}%`;
+          particle.style.opacity = "0";
+          setTimeout(() => particle.remove(), 1000);
+        }, 10);
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+
     // Cleanup when component unmounts
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);

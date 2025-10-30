@@ -42,6 +42,7 @@ const PeoplePage = () => {
             email={person.email}
             linkedin={person.linkedin}
             researchfocus={person.researchfocus}
+            employment={person.employment}
             publications={person.publications}
             prodev={person.prodev}
             education={person.education}

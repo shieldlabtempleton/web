@@ -758,7 +758,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0 10vw;
+  padding: 0 15vw;
   margin-top: -50px;
 }
 
@@ -770,6 +770,8 @@ html {
   padding-bottom: 10px;
   width: 100%;
   text-align: left;
+  position: relative;
+  z-index: 0;
 }
 
 .Publication-year {
@@ -811,6 +813,8 @@ html {
   padding-bottom: 10px;
   width: 100%;
   text-align: left;
+  position: relative;
+  z-index: 0;
 }
 
 .Person-container {
@@ -867,7 +871,7 @@ html {
 }
 
 .Person-container:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .Person-container:hover {
@@ -962,6 +966,8 @@ html {
   /* border-bottom: 1px solid lightgray; */
   padding-bottom: 10px;
   text-align: left;
+  position: relative;
+  z-index: 0;
 }
 
 .Profile-text {
@@ -986,14 +992,30 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  gap: 20px;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .Profile-links {
   height: 40px;
   width: 40px;
+  color: darkslategray;
+}
+
+#Linkedin-icon {
+  height: 35px;
+  width: 35px;
+  color: darkslategray;
+}
+
+#Linkedin-icon:hover {
+  color: #0072b1;
+}
+
+#Email-icon:hover {
+  color: #009374;
 }
 
 /*---- Placeholder ----*/
@@ -1170,6 +1192,8 @@ html {
   width: 100%;
   text-align: left;
   margin-bottom: 50px;
+  position: relative;
+  z-index: 0;
 }
 
 .Collaborators-container {

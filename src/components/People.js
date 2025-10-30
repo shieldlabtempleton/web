@@ -1,5 +1,6 @@
 import anika from "../assests/Photo_of_Anika_Anjum.jpg";
 import megan from "../assests/1761749636381.jpg";
+import samir from "../assests/samir.png";
 import Piphoto from "../assests/Templeton.png";
 
 export const principalinvestigator = [
@@ -67,6 +68,38 @@ export const principalinvestigator = [
 ];
 
 export const gradstudents = [
+  {
+    title: "",
+    firstname: "Samir",
+    middleinitial: "",
+    lastname: "Ahmed, PhD Student",
+    photo: samir,
+    email: "ahmed1@usf.edu",
+    linkedin: "https://www.linkedin.com/in/samir-ahmed1/",
+    researchfocus:
+      "My research is focused on hardware/software co-design to enable AI acceleration on ultra resource-constrained devices, particularly for IoT and healthcare applications. My work blends silicon and board level design, firmware, and machine learning optimizations to make AI models practical for deployment in wearable healthcare devices through both efficient hardware architectures and lean software/model design.",
+    education: [
+      "Ph.D Student in Computer Science and Engineering, University of South Florida, Aug 2023 – Present",
+      "M.S Computer Engineering, University of South Florida, Dec 2025",
+      "B.S Computer Engineering, University of South Florida, Aug 2020 – May 2023",
+      "AA Electrical and Electronics Engineering, Florida Southwestern State College, Aug 2017 – May 2020",
+    ],
+    employment: [
+      "Graduate Research Assistant – University of South Florida, Aug 2023 – Present",
+      "Electrical Design Engineer (contract) – Bay Area Innovations, May 2025 – Present",
+      "Graduate Teaching Assistant – University of South Florida, May 2023 – May 2025",
+    ],
+    publications: [
+      "Farhath Zareen, Ahmed Ghoneim, Mateus A. Fernandes, **Samir Ahmed**, and Robert Karam, “Malware Detection in Embedded Devices Using Artificial Hardware Immunity”, Journal of Hardware and Systems Security, Springer Nature 2025",
+      "**Samir Ahmed**, and Robert Karam, “Emerging Trends in Security-by-Design for Implantable Medical Devices”, IFIP/IEEE International Conference on Very Large Scale Integration (VLSI-SoC 2024) - Tanger, Morocco – October 2024",
+      "**Samir Ahmed**, and Robert Karam, “Modular Security Evaluation Platform for Physiological Closed-Loop Control Systems”, In Proceedings of the Great Lakes Symposium on VLSI (GLSVLSI 2024) – Clearwater, Florida – June 2024",
+      "Shakil Mahmud, **Samir Ahmed**, and Robert Karam, “PEP: Hardware Emulation Platform for Physiological Closed-Loop Control Systems”, IFIP Advances in Information and Communication Technology, vol 684. Springer, Cham, 2023",
+      "Shakil Mahmud, Myles Keller, **Samir Ahmed**, and Robert Karam, “FAMID: False Alarms Mitigation in IoMT Devices”, IFIP Advances in Information and Communication Technology, vol 683. Springer, Cham, 2023",
+    ],
+    prodev: ["IEEE, IEEE Computer Society, IEEE Eta Kappa Nu"],
+    acheivements: null,
+    role: "grad-student",
+  },
   {
     title: "",
     firstname: "Anika",

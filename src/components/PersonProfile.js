@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import defaultphoto from "../assests/defaultuser.png";
 import { FaEnvelope, FaLinkedin } from "react-icons/fa6";
+import { IoMdMail } from "react-icons/io";
 import ReactMarkdown from "react-markdown";
 
 const PersonProfile = () => {
@@ -27,18 +28,12 @@ const PersonProfile = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaEnvelope
-                className="Profile-links"
-                style={{ color: "darkslategray" }}
-              />
+              <IoMdMail className="Profile-links" id="Email-icon" />
             </a>
           ) : null}
           {person.linkedin ? (
             <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin
-                className="Profile-links"
-                style={{ color: "#0072b1" }}
-              />
+              <FaLinkedin className="Profile-links" id="Linkedin-icon" />
             </a>
           ) : null}
         </div>
@@ -77,6 +72,16 @@ const PersonProfile = () => {
             <h1 className="Profile-header">Teaching</h1>
             <ul className="Profile-text">
               {person.teaching.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+        {person.employment ? (
+          <div className="Profile-section">
+            <h1 className="Profile-header">Employment History</h1>
+            <ul className="Profile-text">
+              {person.employment.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
