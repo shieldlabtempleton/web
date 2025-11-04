@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web/static/css/main.f39c343d.css",
-    "main.js": "/web/static/js/main.17fc4b39.js",
+    "main.js": "/web/static/js/main.59c65f37.js",
     "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
@@ -14,6 +14,7 @@
     "static/media/moffitt_2c_rgb_logo.jpeg": "/web/static/media/moffitt_2c_rgb_logo.93683e7b1030d6532cc9.jpeg",
     "static/media/1643408680791.jpeg": "/web/static/media/1643408680791.847f959c2062ec747981.jpeg",
     "static/media/1761749636381.jpg": "/web/static/media/1761749636381.be82fdc0893cb3471dda.jpg",
+    "static/media/varun.jpeg": "/web/static/media/varun.a6874f71a5f701d17efb.jpeg",
     "static/media/DD_437x437.jpg": "/web/static/media/DD_437x437.fabd2c4540265d6bfd7f.jpg",
     "static/media/jay.jpeg": "/web/static/media/jay.57c7bf22044cab9a26c3.jpeg",
     "static/media/tgh-logo.png": "/web/static/media/tgh-logo.9e87e470b99ef50fe5b4.png",
@@ -32,11 +33,11 @@
     "static/media/public-health.svg": "/web/static/media/public-health.46019f178db7b5b19055e3407ecf1362.svg",
     "index.html": "/web/index.html",
     "main.f39c343d.css.map": "/web/static/css/main.f39c343d.css.map",
-    "main.17fc4b39.js.map": "/web/static/js/main.17fc4b39.js.map",
+    "main.59c65f37.js.map": "/web/static/js/main.59c65f37.js.map",
     "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f39c343d.css",
-    "static/js/main.17fc4b39.js"
+    "static/js/main.59c65f37.js"
   ]
 }
