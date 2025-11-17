@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.4065e693.css",
-    "main.js": "/web/static/js/main.5d27bc87.js",
-    "static/js/453.a99ef29f.chunk.js": "/web/static/js/453.a99ef29f.chunk.js",
+    "main.css": "/web/static/css/main.1a5c2dfa.css",
+    "main.js": "/web/static/js/main.1402b020.js",
+    "static/js/453.4a359a8a.chunk.js": "/web/static/js/453.4a359a8a.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
+    "static/media/kundan.jpeg": "/web/static/media/kundan.2cdcb978c4a1326fc90e.jpeg",
+    "static/media/mohamed.png": "/web/static/media/mohamed.3a045775ff7ff518090c.png",
     "static/media/samir.png": "/web/static/media/samir.b671777f22b4a1a7477b.png",
     "static/media/Photo_of_Anika_Anjum.jpg": "/web/static/media/Photo_of_Anika_Anjum.969fac2010a07abfea28.jpg",
     "static/media/mohamad-ebraheem-2.jpg": "/web/static/media/mohamad-ebraheem-2.1df3aed2086ddd2c8abd.jpg",
@@ -13,6 +15,8 @@
     "static/media/hanieh.jpg": "/web/static/media/hanieh.152a3a6137090964ccb0.jpg",
     "static/media/SHIELD.png": "/web/static/media/SHIELD.e07eb9f64fcfe6d68016.png",
     "static/media/1762009583769.jpeg": "/web/static/media/1762009583769.721804c5013181cf269f.jpeg",
+    "static/media/usf_health_voice.png": "/web/static/media/usf_health_voice.bf5a8606543f543f1d79.png",
+    "static/media/tarun.jpg": "/web/static/media/tarun.cb87d0ee6c8ea8e9e2f8.jpg",
     "static/media/moffitt_2c_rgb_logo.jpeg": "/web/static/media/moffitt_2c_rgb_logo.93683e7b1030d6532cc9.jpeg",
     "static/media/1643408680791.jpeg": "/web/static/media/1643408680791.847f959c2062ec747981.jpeg",
     "static/media/1761749636381.jpg": "/web/static/media/1761749636381.be82fdc0893cb3471dda.jpg",
@@ -29,18 +33,19 @@
     "static/media/srikanth.jpeg": "/web/static/media/srikanth.0bd16e87f78250fb6af4.jpeg",
     "static/media/Op1-Bellini-caicc-white-1c-rgb-h.png": "/web/static/media/Op1-Bellini-caicc-white-1c-rgb-h.2b8fc80fe15e227bf6f6.png",
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
+    "static/media/b2ai_voice.png": "/web/static/media/b2ai_voice.d26b53c9c3c10866bc8c.png",
     "static/media/cell.svg": "/web/static/media/cell.2c9957e7f6dc7cbb40ff1ce92e51584f.svg",
     "static/media/brain.svg": "/web/static/media/brain.8b2187729be3d2a6d40097a9c6a452e4.svg",
     "static/media/biomechanics.svg": "/web/static/media/biomechanics.fe0ab60711e832b738cca77299a1e99a.svg",
     "static/media/heart.svg": "/web/static/media/heart.eca2d085a514754e663529860b794799.svg",
     "static/media/public-health.svg": "/web/static/media/public-health.46019f178db7b5b19055e3407ecf1362.svg",
     "index.html": "/web/index.html",
-    "main.4065e693.css.map": "/web/static/css/main.4065e693.css.map",
-    "main.5d27bc87.js.map": "/web/static/js/main.5d27bc87.js.map",
-    "453.a99ef29f.chunk.js.map": "/web/static/js/453.a99ef29f.chunk.js.map"
+    "main.1a5c2dfa.css.map": "/web/static/css/main.1a5c2dfa.css.map",
+    "main.1402b020.js.map": "/web/static/js/main.1402b020.js.map",
+    "453.4a359a8a.chunk.js.map": "/web/static/js/453.4a359a8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4065e693.css",
-    "static/js/main.5d27bc87.js"
+    "static/css/main.1a5c2dfa.css",
+    "static/js/main.1402b020.js"
   ]
 }
