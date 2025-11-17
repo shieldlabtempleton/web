@@ -20,7 +20,7 @@ const HomePage = () => {
         <div className="Lab-description">
           <p>
             SHIELD LAB is specifically focused on the intersection of tech and
-            healthcare focused on smart health systems, human factored design,
+            healthcare, focused on smart health systems, human factored design,
             IoT, mobile computing, and machine learning applications in
             healthcare given Dr. Templeton's background in Biomedical
             Engineering and Computer Science and Engineering. Current research
@@ -31,13 +31,14 @@ const HomePage = () => {
           </p>
           <ul className="horizontal-numbered-list">
             <li>
-              Developing new assessment tools that maximize data quality (e.g.,
-              making tools for all that minimize human error and maximize
+              Developing new assessment tools that will maximize data quality
+              (e.g., making tools for all that minimize human error and maximize
               compliance).
             </li>
             <li>
-              Addressing bias in current health technologies (e.g., focusing on
-              how to collect and analyze data, and how models should be built).
+              Addressing bias in current iterations of health technologies
+              (e.g., focusing on how to collect and analyze data, and how models
+              should be built).
             </li>
             <li>
               Fusing diverse sensor sources through machine learning to improve
@@ -53,10 +54,10 @@ const HomePage = () => {
           <div className="Inner-pi-content-container">
             <div className="Pi-photo-container">
               <img src={piphoto} className="Pi-photo" alt="" />
-              <p className="Pi-name">Dr. John M. Templeton</p>
-              <p className="Pi-title">
+              <span className="Pi-name">Dr. John M. Templeton</span>
+              <span className="Pi-title">
                 Assitant Professor <br /> Computer Science and Engineering
-              </p>
+              </span>
             </div>
             <div className="Pi-affiliation-container">
               <img src={bellinilogo} className="USF-bellini-logo" alt="" />

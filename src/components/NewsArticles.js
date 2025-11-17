@@ -1,8 +1,18 @@
 import news1thumbnail from "../assests/mohamad-ebraheem-2.jpg";
 import news2thumbnail from "../assests/DD_437x437.jpg";
 import news3thumbnail from "../assests/jm-templeton-banner-01.jpg";
+import news4thumbnail from "../assests/1762009583769.jpeg";
 
 const newsarticles = [
+  {
+    title:
+      "First Place Abstract Award at the 2025 Dr. Robert Gillies Machine Learning Workshop at Moffitt Cancer Center",
+    content: "lorem ipsum",
+    date: "November 3, 2025",
+    thumbnail: news4thumbnail,
+    slug: "abstract-award-2025",
+    link: "https://www.linkedin.com/posts/hanieh-ajami_honored-to-be-recognized-with-the-first-place-activity-7390403857257881600-a1TR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAC_G430Bt9GdyNiAcrw6aBlIKCXU_1pUWis",
+  },
   {
     title:
       "Smart mouthguards are one of many innovations coming from USF Bellini’s SHIELD lab",

@@ -13,6 +13,8 @@ import PersonProfile from "./components/PersonProfile";
 import ResearchPage from "./components/ResearchPage";
 import Collaborators from "./components/Collaborators";
 import Contact from "./components/Contact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import NewsFullPage from "./components/NewsFullPage";
 import SiteFooter from "./components/SiteFooter";
 
@@ -36,6 +38,15 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000} // 3 seconds
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        pauseOnHover={false}
+        theme="colored"
+      />
     </div>
   );
 }

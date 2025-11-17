@@ -1,7 +1,8 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import defaultphoto from "../assests/defaultuser.png";
-import { FaEnvelope, FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaGoogleScholar } from "react-icons/fa6";
+import { TbWorldWww } from "react-icons/tb";
 import { IoMdMail } from "react-icons/io";
 import ReactMarkdown from "react-markdown";
 
@@ -20,6 +21,7 @@ const PersonProfile = () => {
         <p className="Profile-name">
           {person.title} {person.firstname} {person.middleinitial}{" "}
           {person.lastname}
+          {person.role == "pi" ? null : ","} {person.suffix}
         </p>
         <div className="Profile-links-container">
           {person.email ? (
@@ -34,6 +36,16 @@ const PersonProfile = () => {
           {person.linkedin ? (
             <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
               <FaLinkedin className="Profile-links" id="Linkedin-icon" />
+            </a>
+          ) : null}
+          {person.gscholar ? (
+            <a href={person.gscholar} target="_blank" rel="noopener noreferrer">
+              <FaGoogleScholar className="Profile-links" id="Gscholar-icon" />
+            </a>
+          ) : null}
+          {person.website ? (
+            <a href={person.website} target="_blank" rel="noopener noreferrer">
+              <TbWorldWww className="Profile-links" id="Website-icon" />
             </a>
           ) : null}
         </div>
@@ -92,6 +104,18 @@ const PersonProfile = () => {
             <h1 className="Profile-header">Publications</h1>
             <ul className="Profile-text">
               {person.publications.map((item, index) => (
+                <li key={index}>
+                  <ReactMarkdown>{item}</ReactMarkdown>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+        {person.presentations ? (
+          <div className="Profile-section">
+            <h1 className="Profile-header">Presentations</h1>
+            <ul className="Profile-text">
+              {person.presentations.map((item, index) => (
                 <li key={index}>
                   <ReactMarkdown>{item}</ReactMarkdown>
                 </li>

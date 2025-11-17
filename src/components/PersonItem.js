@@ -7,6 +7,7 @@ const PersonItem = ({
   firstname,
   middleinitial,
   lastname,
+  suffix,
   title,
   role,
   bio,
@@ -15,6 +16,7 @@ const PersonItem = ({
   researchfocus,
   education,
   publications,
+  presentations,
   employment,
   teaching,
   service,
@@ -22,6 +24,8 @@ const PersonItem = ({
   acheivements,
   email,
   linkedin,
+  gscholar,
+  website,
 }) => {
   const slug =
     role === "pi"
@@ -33,8 +37,10 @@ const PersonItem = ({
       id={
         role === "pi"
           ? "pi-photo"
-          : role === "grad-student"
-          ? "grad-student-photo"
+          : role === "phd-student"
+          ? "phd-student-photo"
+          : role === "msc-student"
+          ? "msc-student-photo"
           : "alumni-photo"
       }
     >
@@ -51,9 +57,13 @@ const PersonItem = ({
               src={photo ? photo : defaultphoto}
               alt=""
             />
-            <p className="Person-name">
-              {title} {firstname} {middleinitial} {lastname}
-            </p>
+            <div className="Person-name-container">
+              <span className="Person-name" id="Current-affiliate-name">
+                {title} {firstname} {middleinitial} {lastname}
+                <br />
+                {suffix}
+              </span>
+            </div>
           </button>
         </a>
       ) : (
@@ -64,6 +74,7 @@ const PersonItem = ({
             firstname,
             middleinitial,
             lastname,
+            suffix,
             title,
             role,
             bio,
@@ -73,12 +84,15 @@ const PersonItem = ({
             education,
             employment,
             publications,
+            presentations,
             teaching,
             service,
             prodev,
             acheivements,
             email,
             linkedin,
+            gscholar,
+            website,
           }}
           className="Profile-link"
         >
@@ -88,9 +102,15 @@ const PersonItem = ({
               src={photo ? photo : defaultphoto}
               alt=""
             />
-            <p className="Person-name">
-              {title} {firstname} {middleinitial} {lastname}
-            </p>
+            <div className="Person-name-container">
+              <span className="Person-name" id="Current-affiliate-name">
+                {title} {firstname} {middleinitial}
+                {role == "pi" ? <br /> : null} {lastname}
+                {role == "pi" ? null : ","}
+                <br />
+                {suffix}
+              </span>
+            </div>
           </button>
         </NavLink>
       )}

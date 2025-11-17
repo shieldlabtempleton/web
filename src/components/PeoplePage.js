@@ -1,12 +1,13 @@
 import React from "react";
 import PersonItem from "./PersonItem";
-import alumn1 from "../assests/1643408680791.jpeg";
-import { gradstudents, principalinvestigator } from "./People";
+import { gradstudents, principalinvestigator, alumni } from "./People";
 
 const PeoplePage = () => {
   return (
     <div className="People">
-      <h1 className="People-header">Principal Investigator</h1>
+      <h1 className="People-header" id="Ph1">
+        Principal Investigator
+      </h1>
       <div className="Pi-container">
         {principalinvestigator.map((pi, index) => (
           <PersonItem
@@ -25,10 +26,14 @@ const PeoplePage = () => {
             acheivements={pi.acheivements}
             email={pi.email}
             linkedin={pi.linkedin}
+            suffix={pi.suffix}
+            gscholar={pi.gscholar}
           />
         ))}
       </div>
-      <h1 className="People-header">Graduate Students</h1>
+      <h1 className="People-header" id="Ph2">
+        Graduate Students
+      </h1>
       <div className="Grad-students-container">
         {gradstudents.map((person, index) => (
           <PersonItem
@@ -41,12 +46,16 @@ const PeoplePage = () => {
             role={person.role}
             email={person.email}
             linkedin={person.linkedin}
+            website={person.website}
             researchfocus={person.researchfocus}
             employment={person.employment}
             publications={person.publications}
+            presentations={person.presentations}
             prodev={person.prodev}
             education={person.education}
             acheivements={person.acheivements}
+            suffix={person.suffix}
+            gscholar={person.gscholar}
           />
         ))}
         {/* <PersonItem
@@ -56,17 +65,21 @@ const PeoplePage = () => {
           role={"grad-student"}
         /> */}
       </div>
-      <h1 className="People-header">Alumni</h1>
+      <h1 className="People-header" id="Ph3">
+        Alumni
+      </h1>
       <div className="Alumni-container">
-        <PersonItem
-          firstname={"Taofeek"}
-          lastname={"Braimoh, MSc '25"}
-          photo={alumn1}
-          role={"alumni"}
-          linkedin={
-            "https://www.linkedin.com/in/taofeek-braimoh?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BgU4HDiGyQ56pK9jhlzvfSw%3D%3D"
-          }
-        />
+        {alumni.map((alumn, index) => (
+          <PersonItem
+            firstname={alumn.firstname}
+            middleinitial={alumn.middleinitial}
+            lastname={alumn.lastname}
+            photo={alumn.photo}
+            role={alumn.role}
+            linkedin={alumn.linkedin}
+            suffix={alumn.suffix}
+          />
+        ))}
       </div>
     </div>
   );
