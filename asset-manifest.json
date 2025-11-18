@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web/static/css/main.1a5c2dfa.css",
-    "main.js": "/web/static/js/main.1402b020.js",
+    "main.js": "/web/static/js/main.74352104.js",
     "static/js/453.4a359a8a.chunk.js": "/web/static/js/453.4a359a8a.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
@@ -9,6 +9,7 @@
     "static/media/mohamed.png": "/web/static/media/mohamed.3a045775ff7ff518090c.png",
     "static/media/samir.png": "/web/static/media/samir.b671777f22b4a1a7477b.png",
     "static/media/Photo_of_Anika_Anjum.jpg": "/web/static/media/Photo_of_Anika_Anjum.969fac2010a07abfea28.jpg",
+    "static/media/102925-jm-rushitha-banner-01.jpg": "/web/static/media/102925-jm-rushitha-banner-01.249b7da574d03d5461a5.jpg",
     "static/media/mohamad-ebraheem-2.jpg": "/web/static/media/mohamad-ebraheem-2.1df3aed2086ddd2c8abd.jpg",
     "static/media/kayla.jpg": "/web/static/media/kayla.de4cbaa6ca1a1d7e5270.jpg",
     "static/media/rushitha.jpg": "/web/static/media/rushitha.573c40ee82e16f5abcce.jpg",
@@ -41,11 +42,11 @@
     "static/media/public-health.svg": "/web/static/media/public-health.46019f178db7b5b19055e3407ecf1362.svg",
     "index.html": "/web/index.html",
     "main.1a5c2dfa.css.map": "/web/static/css/main.1a5c2dfa.css.map",
-    "main.1402b020.js.map": "/web/static/js/main.1402b020.js.map",
+    "main.74352104.js.map": "/web/static/js/main.74352104.js.map",
     "453.4a359a8a.chunk.js.map": "/web/static/js/453.4a359a8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1a5c2dfa.css",
-    "static/js/main.1402b020.js"
+    "static/js/main.74352104.js"
   ]
 }
