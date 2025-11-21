@@ -11,6 +11,7 @@ import BackgroundEffects from "./components/BackgroundEffects";
 import ScrollToTop from "./components/ScrollToTop";
 import PersonProfile from "./components/PersonProfile";
 import ResearchPage from "./components/ResearchPage";
+import ResearchPageAlt from "./components/ResearchPageAlt";
 import Collaborators from "./components/Collaborators";
 import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";

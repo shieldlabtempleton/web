@@ -13,6 +13,19 @@ html {
   cursor: default !important;
 }
 
+/* Default grey edges */
+.flow-edge .react-flow__edge-path {
+  stroke: lightgray;
+  stroke-width: 5;
+  transition: stroke 0.25s ease, stroke-width 0.25s ease;
+}
+
+/* Highlighted edges */
+.flow-edge.edge-highlight .react-flow__edge-path {
+  stroke: url(#edgeGradient1);
+  stroke-width: 7;
+}
+
 .wave-overlay {
   position: absolute;
   top: 0;
@@ -1099,6 +1112,7 @@ html {
   align-items: center;
   margin-top: -50px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .Research-header {
@@ -1111,11 +1125,18 @@ html {
   text-align: left;
   position: relative;
   z-index: 0;
+  display: none;
 }
 
-.Research-items {
+.React-flow-container {
+  width: 100vw;
+  height: 81vh;
+  /* background: "red", */
+}
+
+.Research-cards-grid {
   width: 100%;
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 40px;
@@ -1183,6 +1204,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 10px;
 }
 
 .Research-card .back {
@@ -1208,7 +1230,7 @@ html {
 }
 
 .Research-card-container-2:hover .Research-card {
-  transform: rotateY(180deg) scale(1.15);
+  transform: rotateY(180deg) scale(1.3);
 }
 
 .Research-card-icon {
@@ -1226,9 +1248,137 @@ html {
   fill: white;
 }
 
+#HCI-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: -10px;
+}
+
 .Research-card-topic {
   color: white;
   font-size: 22px;
+}
+
+.Research-card-topic-2 {
+  color: white;
+  font-size: 22px;
+}
+
+.Scroll-anim-container {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  /* background: rgba(255, 255, 255, 0.05); */
+  border-radius: 5px;
+  z-index: 1;
+  transition: all 300ms ease-in-out;
+}
+
+#Scroll2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 15%;
+  left: 5%;
+  /* background-color: red; */
+  z-index: 1;
+}
+
+.Scroll-anim-container:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.hide-button {
+  opacity: 0;
+  pointer-events: none; /* only disabled when invisible */
+}
+
+.Chevron {
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  opacity: 0;
+  animation: move-chevron 3s ease-out infinite;
+  animation-fill-mode: both;
+  top: -25px;
+}
+
+.Chevron:first-child {
+  animation-delay: 300ms;
+}
+
+.Chevron:nth-child(2) {
+  animation-delay: 1.3s;
+}
+
+.Chevron:nth-child(3) {
+  animation-delay: 2.3s;
+}
+
+.Chevron:before,
+.Chevron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  /* background: #2c3e50; */
+}
+
+.Chevron:first-child::before,
+.Chevron:first-child::after {
+  background: #009374;
+}
+
+.Chevron:nth-child(2)::before,
+.Chevron:nth-child(2)::after {
+  background: #005432;
+}
+
+.Chevron:nth-child(3)::before,
+.Chevron:nth-child(3)::after {
+  background: #9ccb3b;
+}
+
+.Chevron:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+
+.Chevron:after {
+  right: 0;
+  transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(2.28rem) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(3.12rem) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(4.8rem) scale(0.5);
+  }
 }
 
 /*---- News full page ----*/
@@ -1714,6 +1864,34 @@ html {
   .Navbar-toggle.open .bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
     /* box-shadow: 0 0 8px 2px rgba(255, 255, 255, 0.7); */
+  }
+}
+
+/*-- Research configurations --*/
+@media (max-width: 900px) {
+  .Research-header {
+    display: flex;
+  }
+
+  .React-flow-container {
+    display: none;
+  }
+
+  .Research-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+    gap: 50px;
+    /* background-color: red; */
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .Scroll-anim-container {
+    right: 3%;
+  }
+
+  #Scroll2 {
+    left: 3%;
   }
 }
 

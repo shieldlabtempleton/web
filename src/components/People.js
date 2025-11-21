@@ -1,6 +1,7 @@
 import samir from "../assests/samir.png";
 import hanieh from "../assests/hanieh.jpg";
 import anika from "../assests/Photo_of_Anika_Anjum.jpg";
+import venkata from "../assests/venkatarahul.jpg";
 import mohamed from "../assests/mohamed.png";
 import parsa from "../assests/parsa.jpg";
 import rushitha from "../assests/rushitha.jpg";
@@ -178,6 +179,30 @@ export const gradstudents = [
       "Dean's Award by Faculty of Electrical and Electronics Engineering, KUET - 3rd year",
     ],
     role: "phd-student",
+  },
+  {
+    title: "",
+    firstname: "Venkata",
+    middleinitial: "",
+    lastname: "Cherukuri",
+    suffix: " PhD Student",
+    photo: venkata,
+    email: "venkatarahulc@usf.edu",
+    linkedin: "www.linkedin.com/in/venkata-rahul-ch/",
+    role: "phd-student",
+    researchfocus:
+      "My research focuses on deep learning based time-series modeling of physiological data, with a focus on LSTMs and Temporal Convolutional Networks for anomaly detection in cardiovascular, neurological, and muscular systems. My work emphasizes interpretable and clinically meaningful AI for healthcare. As part of my current project, I am developing an event-aligned EEG analysis pipeline to distinguish mild and moderate traumatic brain injury using full-sequence and event-level neural signatures.",
+    education: [
+      "Ph.D student in Computer Science and Engineering, University of South Florida, Aug 2025 - Present",
+      "M.S in Computer Science and Engineering, University of South Florida, Aug 2023 - May 2025",
+      "B.Tech in Computer Science and Engineering, JNTUK, Aug 2017 - April 2021",
+    ],
+    publications: null,
+    employment: [
+      "Graduate Teaching Assistant - Operating Systems, University of South Florida, Fall 2025",
+      "Digital Specialist Engineer – Infosys Limited, Aug 2021 – July 2023",
+    ],
+    acheivements: null,
   },
   {
     title: "",

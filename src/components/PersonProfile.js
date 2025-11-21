@@ -21,7 +21,7 @@ const PersonProfile = () => {
         <p className="Profile-name">
           {person.title} {person.firstname} {person.middleinitial}{" "}
           {person.lastname}
-          {person.role == "pi" ? null : ","} {person.suffix}
+          {person.role === "pi" ? null : ","} {person.suffix}
         </p>
         <div className="Profile-links-container">
           {person.email ? (

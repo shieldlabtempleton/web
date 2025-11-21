@@ -2,8 +2,18 @@ import news1thumbnail from "../assests/mohamad-ebraheem-2.jpg";
 import news2thumbnail from "../assests/DD_437x437.jpg";
 import news3thumbnail from "../assests/jm-templeton-banner-01.jpg";
 import news4thumbnail from "../assests/1762009583769.jpeg";
+import news5thumbnail from "../assests/102925-jm-rushitha-banner-01.jpg";
 
 const newsarticles = [
+  {
+    title:
+      "USF doctoral student is creating an AI tool to turn complex cancer reports into clarity",
+    content: "lorem ipsum",
+    date: "November 18, 2025",
+    thumbnail: news5thumbnail,
+    slug: "AI-cancer-tool",
+    link: "https://www.usf.edu/ai-cybersecurity-computing/news/2025/rushitha.aspx",
+  },
   {
     title:
       "First Place Abstract Award at the 2025 Dr. Robert Gillies Machine Learning Workshop at Moffitt Cancer Center",
