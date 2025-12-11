@@ -1,10 +1,10 @@
 import React from "react";
-import lablogo from "../assests/SHIELD.png";
-import piphoto from "../assests/Templeton.png";
-import medicallogo from "../assests/medical-white-vertical-transparent.png";
-import bellinilogo from "../assests/Op1-Bellini-caicc-white-1c-rgb-h.png";
+import lablogo from "../assets/SHIELD.png";
+import piphoto from "../assets/Templeton.png";
+import medicallogo from "../assets/medical-white-vertical-transparent.png";
+import bellinilogo from "../assets/Op1-Bellini-caicc-white-1c-rgb-h.png";
 import NewsItem from "./NewsItem";
-import newsarticles from "./NewsArticles";
+import newsarticles from "../webdata/NewsArticles";
 import NewsSection from "./NewsSection";
 
 const HomePage = () => {

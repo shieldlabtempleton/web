@@ -15,8 +15,9 @@ import Collaborators from "./components/Collaborators";
 import Contact from "./components/Contact";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ResearchTopics from "./components/ResearchTopics";
+import ResearchTopicsPage from "./components/ResearchTopicsPage";
 import NewsFullPage from "./components/NewsFullPage";
+import "animate.css/animate.min.css";
 // import NewsFullPage from "./components/NewsFullPage";
 // import SiteFooter from "./components/SiteFooter";
 
@@ -40,7 +41,7 @@ function App() {
           <Route path="/news" element={<NewsFullPage />} />
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/research" element={<ResearchPage />} />
-          <Route path="/research/:slug" element={<ResearchTopics />} />
+          <Route path="/research/:slug" element={<ResearchTopicsPage />} />
           <Route path="/people" element={<PeoplePage />} />
           <Route path="/people/:slug" element={<PersonProfile />} />
           <Route path="/collaborators" element={<Collaborators />} />

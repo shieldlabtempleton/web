@@ -1,5 +1,5 @@
 import React from "react";
-import construction from "../assests/construction.png";
+import construction from "../assets/construction.png";
 
 const Placeholder = () => {
   return (

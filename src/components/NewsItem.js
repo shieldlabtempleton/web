@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaAngleRight } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
-
-const NewsItem = ({ thumbnail, title, date, slug, link }) => {
+import WOW from "wowjs";
+const NewsItem = ({ index, thumbnail, title, date, slug, link }) => {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
-    <a href={link} className="News-item-container">
+    <a
+      href={link}
+      className="News-item-container wow animate__animated animate__zoomIn"
+    >
       <img src={thumbnail} className="News-thumbnail" alt="" />
       <div className="News-info-container">
         <div className="News-title">

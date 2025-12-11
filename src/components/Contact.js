@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Placeholder from "./Placeholder";
 import emailjs from "@emailjs/browser";
-import lablogo from "../assests/SHIELD.png";
+import lablogo from "../assets/SHIELD.png";
 import { toast } from "react-toastify";
 
 const Contact = () => {

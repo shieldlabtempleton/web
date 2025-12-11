@@ -1,6 +1,6 @@
 import React from "react";
 import PersonItem from "./PersonItem";
-import { gradstudents, principalinvestigator, alumni } from "./People";
+import { gradstudents, principalinvestigator, alumni } from "../webdata/People";
 
 const PeoplePage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../src/assests/USF_Bellini.png";
+import logo from "../../src/assets/USF_Bellini.png";
 import { FaInstagram } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";

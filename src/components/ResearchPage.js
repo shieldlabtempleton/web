@@ -1,18 +1,18 @@
 import React, { useEffect, useLayoutEffect } from "react";
-import lablogo from "../assests/SHIELD.png";
+import lablogo from "../assets/SHIELD.png";
 import ResearchCard from "./ResearchCard";
-import { ReactComponent as Heart } from "../assests/heart.svg";
-import { ReactComponent as Brain } from "../assests/brain.svg";
-import { ReactComponent as Cell } from "../assests/cell.svg";
-import { ReactComponent as Biomechanics } from "../assests/biomechanics.svg";
-import { ReactComponent as Publichealth } from "../assests/public-health.svg";
-import { ReactComponent as Ai } from "../assests/ai.svg";
-import { ReactComponent as Mobile } from "../assests/mobile.svg";
-import { ReactComponent as Vision } from "../assests/vision.svg";
-import { ReactComponent as Hardware } from "../assests/hardware.svg";
-import { ReactComponent as Nlp } from "../assests/nlp.svg";
-import { ReactComponent as Software } from "../assests/software.svg";
-import { ReactComponent as Hci } from "../assests/hci.svg";
+import { ReactComponent as Heart } from "../assets/heart.svg";
+import { ReactComponent as Brain } from "../assets/brain.svg";
+import { ReactComponent as Cell } from "../assets/cell.svg";
+import { ReactComponent as Biomechanics } from "../assets/biomechanics.svg";
+import { ReactComponent as Publichealth } from "../assets/public-health.svg";
+import { ReactComponent as Ai } from "../assets/ai.svg";
+import { ReactComponent as Mobile } from "../assets/mobile.svg";
+import { ReactComponent as Vision } from "../assets/vision.svg";
+import { ReactComponent as Hardware } from "../assets/hardware.svg";
+import { ReactComponent as Nlp } from "../assets/nlp.svg";
+import { ReactComponent as Software } from "../assets/software.svg";
+import { ReactComponent as Hci } from "../assets/hci.svg";
 import ScrollDown from "./ScrollButton";
 import ReactFlow, {
   useReactFlow,
@@ -23,6 +23,7 @@ import "reactflow/dist/style.css";
 import { CustomNode, ImageNode } from "./CustomNode";
 import StaticNode from "./StaticNode";
 import { DownwardEdge, DefaultEdge } from "./CustomEdges";
+import { biomechanics } from "../webdata/ResearchTopics";
 
 const ResearchPage = () => {
   const sw = 5;
@@ -170,6 +171,7 @@ const ResearchPage = () => {
         description:
           "Analyzing biomechanics via sensor-driven systems for movement, joint loading, and injury risk can guide guide rehabilitation, athletic training, etc.",
         showTarget: true,
+        researchdata: biomechanics,
       },
     },
     {

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import defaultphoto from "../assests/defaultuser.png";
+import defaultphoto from "../assets/defaultuser.png";
 import { FaLinkedin, FaGoogleScholar } from "react-icons/fa6";
 import { TbWorldWww } from "react-icons/tb";
 import { IoMdMail } from "react-icons/io";

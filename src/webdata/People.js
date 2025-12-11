@@ -1,19 +1,19 @@
-import samir from "../assests/samir.png";
-import hanieh from "../assests/hanieh.jpg";
-import anika from "../assests/Photo_of_Anika_Anjum.jpg";
-import venkata from "../assests/venkatarahul.jpg";
-import mohamed from "../assests/mohamed.png";
-import parsa from "../assests/parsa.jpg";
-import rushitha from "../assests/rushitha.jpg";
-import srikanth from "../assests/srikanth.jpeg";
-import kayla from "../assests/kayla.jpg";
-import jay from "../assests/jay.jpeg";
-import tarun from "../assests/tarun.jpg";
-import kundan from "../assests/kundan.jpeg";
-import megan from "../assests/1761749636381.jpg";
-import Piphoto from "../assests/Templeton.png";
-import alumn1 from "../assests/1643408680791.jpeg";
-import alumn2 from "../assests/varun.jpeg";
+import samir from "../assets/samir.png";
+import hanieh from "../assets/hanieh.jpg";
+import anika from "../assets/Photo_of_Anika_Anjum.jpg";
+import venkata from "../assets/venkatarahul.jpg";
+import mohamed from "../assets/mohamed.png";
+import parsa from "../assets/parsa.jpg";
+import rushitha from "../assets/rushitha.jpg";
+import srikanth from "../assets/srikanth.jpeg";
+import kayla from "../assets/kayla.jpg";
+import jay from "../assets/jay.jpeg";
+import tarun from "../assets/tarun.jpg";
+import kundan from "../assets/kundan.jpeg";
+import megan from "../assets/1761749636381.jpg";
+import Piphoto from "../assets/Templeton.png";
+import alumn1 from "../assets/1643408680791.jpeg";
+import alumn2 from "../assets/varun.jpeg";
 
 export const principalinvestigator = [
   {

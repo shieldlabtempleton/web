@@ -1,12 +1,12 @@
 import React from "react";
 // import Placeholder from "./Placeholder";
-import logo1 from "../assests/tgh-logo.png";
-import logo2 from "../assests/Op1-Bellini-caicc-green text-2c-rgb-h.png";
-import logo3 from "../assests/medical-color-horizontal-transparent.png";
-import logo4 from "../assests/moffitt_2c_rgb_logo.jpeg";
-import logo5 from "../assests/USF Health Logo3.png";
-import logo6 from "../assests/usf_health_voice.png";
-import logo7 from "../assests/b2ai_voice.png";
+import logo1 from "../assets/tgh-logo.png";
+import logo2 from "../assets/Op1-Bellini-caicc-green text-2c-rgb-h.png";
+import logo3 from "../assets/medical-color-horizontal-transparent.png";
+import logo4 from "../assets/moffitt_2c_rgb_logo.jpeg";
+import logo5 from "../assets/USF Health Logo3.png";
+import logo6 from "../assets/usf_health_voice.png";
+import logo7 from "../assets/b2ai_voice.png";
 
 const Collaborators = () => {
   return (

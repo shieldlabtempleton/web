@@ -1,5 +1,5 @@
 import React from "react";
-import news1thumbnail from "../assests/DD_437x437.jpg";
+import news1thumbnail from "../assets/DD_437x437.jpg";
 import NewsItem from "./NewsItem";
 import { NavLink } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa6";
@@ -34,6 +34,7 @@ const NewsSection = ({ newsarticles }) => {
             date={article.date}
             slug={article.slug}
             link={article.link}
+            index={index}
           />
         ))}
       </div>

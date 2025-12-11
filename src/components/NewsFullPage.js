@@ -17,6 +17,7 @@ const NewsFullPage = () => {
             date={article.date}
             slug={article.slug}
             link={article.link}
+            index={index}
           />
         ))}
       </div>

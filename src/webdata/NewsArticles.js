@@ -1,8 +1,8 @@
-import news1thumbnail from "../assests/mohamad-ebraheem-2.jpg";
-import news2thumbnail from "../assests/DD_437x437.jpg";
-import news3thumbnail from "../assests/jm-templeton-banner-01.jpg";
-import news4thumbnail from "../assests/1762009583769.jpeg";
-import news5thumbnail from "../assests/102925-jm-rushitha-banner-01.jpg";
+import news1thumbnail from "../assets/mohamad-ebraheem-2.jpg";
+import news2thumbnail from "../assets/DD_437x437.jpg";
+import news3thumbnail from "../assets/jm-templeton-banner-01.jpg";
+import news4thumbnail from "../assets/1762009583769.jpeg";
+import news5thumbnail from "../assets/102925-jm-rushitha-banner-01.jpg";
 
 const newsarticles = [
   {

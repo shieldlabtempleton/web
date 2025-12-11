@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "thumbnail": "../assets/gg.png",
+      "title": "Gamified Wearable Therapy",
+      "description": " A wearable EMG sensor array connects real movement to on-screen gameplay, turning children's therapy into an intuitive, motivating experience. The system adapts to each child, supports clinician-guided adjustments, and tracks progress to enhance long-term physical outcomes.",
+      "keywords": ["Biomechanics", "HCI", "Hardware"]
+    }
+  ]
+}

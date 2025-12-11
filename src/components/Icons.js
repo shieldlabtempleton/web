@@ -1,15 +1,15 @@
-import { ReactComponent as Heart } from "../assests/heart.svg";
-import { ReactComponent as Brain } from "../assests/brain.svg";
-import { ReactComponent as Cell } from "../assests/cell.svg";
-import { ReactComponent as Biomechanics } from "../assests/biomechanics.svg";
-import { ReactComponent as Publichealth } from "../assests/public-health.svg";
-import { ReactComponent as Ai } from "../assests/ai.svg";
-import { ReactComponent as Mobile } from "../assests/mobile.svg";
-import { ReactComponent as Vision } from "../assests/vision.svg";
-import { ReactComponent as Hardware } from "../assests/hardware.svg";
-import { ReactComponent as Nlp } from "../assests/nlp.svg";
-import { ReactComponent as Software } from "../assests/software.svg";
-import { ReactComponent as Hci } from "../assests/hci.svg";
+import { ReactComponent as Heart } from "../assets/heart.svg";
+import { ReactComponent as Brain } from "../assets/brain.svg";
+import { ReactComponent as Cell } from "../assets/cell.svg";
+import { ReactComponent as Biomechanics } from "../assets/biomechanics.svg";
+import { ReactComponent as Publichealth } from "../assets/public-health.svg";
+import { ReactComponent as Ai } from "../assets/ai.svg";
+import { ReactComponent as Mobile } from "../assets/mobile.svg";
+import { ReactComponent as Vision } from "../assets/vision.svg";
+import { ReactComponent as Hardware } from "../assets/hardware.svg";
+import { ReactComponent as Nlp } from "../assets/nlp.svg";
+import { ReactComponent as Software } from "../assets/software.svg";
+import { ReactComponent as Hci } from "../assets/hci.svg";
 import { FaEnvelopeOpenText } from "react-icons/fa6";
 
 export const HeartIcon = Heart;

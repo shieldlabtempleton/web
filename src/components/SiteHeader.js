@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../src/assests/USF_Bellini.png";
+import logo from "../../src/assets/USF_Bellini.png";
 
 function SiteHeader() {
   return (

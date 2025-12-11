@@ -1,5 +1,5 @@
 import React from "react";
-import defaultphoto from "../assests/defaultuser.png";
+import defaultphoto from "../assets/defaultuser.png";
 import { NavLink } from "react-router-dom";
 
 const PersonItem = ({
