@@ -8,19 +8,57 @@ export default function ScrollDown(props) {
       behavior: "smooth", // smooth animation
     });
   };
-  // Helper: check if page is at the bottom
-  const checkIfAtBottom = () => {
-    const scrollY = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    const fullHeight = document.documentElement.scrollHeight;
-
-    const isAtBottom = scrollY + viewportHeight >= fullHeight - 50;
-    setHide(isAtBottom);
-  };
-
+  //check if at bottom
   useLayoutEffect(() => {
-    checkIfAtBottom();
+    const compute = () => {
+      const scrollY = window.scrollY;
+      const viewportHeight =
+        window.visualViewport?.height ?? window.innerHeight;
+      const fullHeight = document.documentElement.scrollHeight;
+
+      const isAtBottom = scrollY + viewportHeight >= fullHeight - 50;
+      setHide(isAtBottom);
+    };
+
+    let timer = null;
+
+    // Detect touch devices (mobile/iPad) where layout needs settling time
+    const isTouchDevice =
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0 ||
+      navigator.msMaxTouchPoints > 0;
+
+    const run = () => {
+      if (isTouchDevice) {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          // Make sure layout is fully updated on mobile Safari
+          requestAnimationFrame(() => requestAnimationFrame(compute));
+        }, 100);
+      } else {
+        // Desktop → immediate
+        compute();
+      }
+    };
+
+    // Run on mount
+    run();
+
+    // Relevant listeners:
+    window.addEventListener("resize", run);
+    window.addEventListener("orientationchange", run);
+    window.visualViewport?.addEventListener("resize", run);
+    window.addEventListener("scroll", run); // scrolling affects bottom detection
+
+    return () => {
+      window.removeEventListener("resize", run);
+      window.removeEventListener("orientationchange", run);
+      window.visualViewport?.removeEventListener("resize", run);
+      window.removeEventListener("scroll", run);
+      if (timer) clearTimeout(timer);
+    };
   }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;

@@ -74,7 +74,7 @@ export const principalinvestigator = [
       "2020 Outstanding Graduate Student Teacher, University of Notre Dame ‑ Computer Science and Engineering",
       "2020 Department Service Award, University of Notre Dame ‑ Computer Science and Engineering",
       "2016 Prescott Fellow, Arizona State University ‑ Entrepreneurship Program",
-      "2015 Distinguished Graduate, Arizona State University ‑ Ira a. Fulton Schools of Engineering",
+      "2015 Distinguished Graduate, Arizona State University ‑ Ira A. Fulton Schools of Engineering",
       "2006 Eagle Scout (10 Palms), Boy Scouts of America (BSA)",
     ],
   },
@@ -454,7 +454,7 @@ export const alumni = [
     lastname: "Braimoh,",
     suffix: " MSc '25",
     role: "alumni",
-    linkedin: "https://www.linkedin.com/in/taofeek-braimoh",
+    linkedin: "https://taofeeeek.github.io/tb/",
   },
   {
     firstname: "Varun",

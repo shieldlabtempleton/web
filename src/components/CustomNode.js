@@ -1,6 +1,8 @@
 // CustomNode.js
 import React, { memo } from "react";
 import { Handle, Position } from "reactflow";
+import { NavLink } from "react-router-dom";
+import * as Icons from "./Icons";
 
 const CARD_MAP = {
   1: [
@@ -17,22 +19,38 @@ const CARD_MAP = {
     "e12-1",
     "e13-1",
   ],
-  2: ["e1-2", "e7-1", "e9-1", "e10-1", "e11-1"],
+  2: ["e1-2", "e7-1", "e8-1", "e10-1", "e11-1"],
   3: ["e1-3", "e7-1", "e9-1", "e12-1"],
   4: ["e1-4", "e7-1", "e8-1", "e10-1"],
   5: ["e1-5", "e7-1", "e8-1", "e9-1", "e10-1", "e11-1", "e13-1"],
   6: ["e1-6", "e8-1", "e12-1", "e13-1"],
   7: ["e7-1", "e1-2", "e1-3", "e1-4", "e1-5"],
   8: ["e8-1", "e1-2", "e1-4", "e1-5", "e1-6"],
-  9: ["e9-1", "e1-2", "e1-4"],
+  9: ["e9-1", "e1-3", "e1-5"],
   10: ["e10-1", "e1-2", "e1-4", "e1-5"],
   11: ["e11-1", "e1-2", "e1-5"],
   12: ["e12-1", "e1-3", "e1-6"],
   13: ["e13-1", "e1-5", "e1-6"],
 };
 
+const ICON_MAP = {
+  Ai: Icons.AiIcon,
+  Biomechanics: Icons.BiomechanicsIcon,
+  Brain: Icons.BrainIcon,
+  Cell: Icons.CellIcon,
+  Heart: Icons.HeartIcon,
+  Publichealth: Icons.PublichealthIcon,
+  Mobile: Icons.MobileIcon,
+  Hardware: Icons.HardwareIcon,
+  Nlp: Icons.NlpIcon,
+  Software: Icons.SoftwareIcon,
+  Vision: Icons.VisionIcon,
+  Hci: Icons.HciIcon,
+};
+
 export function CustomNode({ id, data }) {
-  const Icon = data.icon;
+  const Icon = ICON_MAP[data.icon];
+  const slug = `/research/${data.slug}`;
 
   const onEnter = () => {
     const edgesToHighlight = CARD_MAP[id] || [];
@@ -45,7 +63,9 @@ export function CustomNode({ id, data }) {
     window.dispatchEvent(new CustomEvent("highlight-edges", { detail: [] }));
   };
   return (
-    <div
+    <NavLink
+      to={slug}
+      state={{ data }}
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       className="Research-card-container-2"
@@ -58,7 +78,7 @@ export function CustomNode({ id, data }) {
           <h1 className="Research-card-topic-2">{data.label}</h1>
         </div>
         <div className="back">
-          <p style={{ fontSize: "16px" }}>
+          <p style={{ fontSize: "17px" }}>
             {data.description
               ? data.description
               : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
@@ -89,7 +109,7 @@ export function CustomNode({ id, data }) {
           isConnectable={false}
         />
       )}
-    </div>
+    </NavLink>
   );
 }
 
@@ -105,11 +125,15 @@ export function ImageNode({ id, data }) {
     window.dispatchEvent(new CustomEvent("highlight-edges", { detail: [] }));
   };
   return (
-    <div onMouseEnter={onEnter} onMouseLeave={onLeave}>
-      <img
-        src={data.image}
-        style={{ height: "250px", width: "250px", cursor: "pointer" }}
-      />
+    <NavLink
+      to={"/"}
+      onMouseEnter={onEnter}
+      onMouseLeave={onLeave}
+      style={{ cursor: "pointer" }}
+    >
+      <button style={{ all: "unset" }}>
+        <img src={data.image} className="image-node" />
+      </button>
       <Handle
         type="target"
         position={Position.Top}
@@ -143,7 +167,7 @@ export function ImageNode({ id, data }) {
       <Handle
         type="source"
         id="t1"
-        style={{ left: "15%", top: "65%", opacity: data.opac }}
+        style={{ left: "17%", top: "67%", opacity: data.opac }}
         isConnectable={false}
       />
       <Handle
@@ -168,9 +192,9 @@ export function ImageNode({ id, data }) {
       <Handle
         type="source"
         id="t5"
-        style={{ left: "84%", top: "65%", opacity: data.opac }}
+        style={{ left: "82%", top: "67%", opacity: data.opac }}
         isConnectable={false}
       />
-    </div>
+    </NavLink>
   );
 }

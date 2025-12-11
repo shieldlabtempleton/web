@@ -1,6 +1,5 @@
 import React, { useEffect, useLayoutEffect } from "react";
 import lablogo from "../assests/SHIELD.png";
-import Placeholder from "./Placeholder";
 import ResearchCard from "./ResearchCard";
 import { ReactComponent as Heart } from "../assests/heart.svg";
 import { ReactComponent as Brain } from "../assests/brain.svg";
@@ -12,15 +11,10 @@ import { ReactComponent as Mobile } from "../assests/mobile.svg";
 import { ReactComponent as Vision } from "../assests/vision.svg";
 import { ReactComponent as Hardware } from "../assests/hardware.svg";
 import { ReactComponent as Nlp } from "../assests/nlp.svg";
-import { ReactComponent as Robotics } from "../assests/robotics.svg";
 import { ReactComponent as Software } from "../assests/software.svg";
 import { ReactComponent as Hci } from "../assests/hci.svg";
 import ScrollDown from "./ScrollButton";
 import ReactFlow, {
-  Background,
-  Controls,
-  Handle,
-  Position,
   useReactFlow,
   useEdgesState,
   useNodesState,
@@ -28,7 +22,7 @@ import ReactFlow, {
 import "reactflow/dist/style.css";
 import { CustomNode, ImageNode } from "./CustomNode";
 import StaticNode from "./StaticNode";
-import DownwardEdge from "./CustomEdges";
+import { DownwardEdge, DefaultEdge } from "./CustomEdges";
 
 const ResearchPage = () => {
   const sw = 5;
@@ -45,7 +39,7 @@ const ResearchPage = () => {
       const nodeWidths = nodes.map((node) => node.data?.width || 0);
 
       const left = Math.min(...xPositions);
-      const right = Math.max(...xPositions.map((x, i) => x + 200));
+      const right = Math.max(...xPositions.map((x, i) => x + 230));
 
       const nodesWidth = right - left;
 
@@ -53,15 +47,15 @@ const ResearchPage = () => {
       const containerWidth = window.innerWidth;
 
       // Compute offset to center nodes horizontally
-      const offsetX = (containerWidth - nodesWidth * 0.5) / 2;
+      const offsetX = (containerWidth - nodesWidth * 0.55) / 2;
 
-      const offsetY = 20; // optional top padding
+      const offsetY = 15; // optional top padding
       // console.log(left, right, nodesWidth, containerWidth);
 
       setViewport({
         x: offsetX,
         y: offsetY,
-        zoom: 0.5, // initial zoom level
+        zoom: 0.55, // initial zoom level
       });
     }, [nodes, setViewport]);
 
@@ -73,7 +67,47 @@ const ResearchPage = () => {
 
     useEffect(() => {
       const handleResize = () => {
-        fitView({ padding: 0.2, duration: 0 });
+        fitView({ padding: 0.2, duration: 0, minZoom: 0.55 });
+      };
+
+      // Detect touch device (iPad/mobile)
+      const isTouchDevice =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
+
+      let timer = null;
+
+      // For mobile/iPad → use delayed version (handles Safari orientation bugs)
+      const runMobile = () => {
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          requestAnimationFrame(() => requestAnimationFrame(handleResize));
+        }, 100);
+      };
+
+      // For desktop → run immediately (no lag)
+      const runDesktop = () => {
+        handleResize();
+      };
+
+      const handler = isTouchDevice ? runMobile : runDesktop;
+
+      handler(); // run on mount
+
+      window.addEventListener("resize", handler);
+      window.addEventListener("orientationchange", handler);
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", handler);
+      }
+
+      return () => {
+        window.removeEventListener("resize", handler);
+        window.removeEventListener("orientationchange", handler);
+        if (window.visualViewport) {
+          window.visualViewport.removeEventListener("resize", handler);
+        }
+        if (timer) clearTimeout(timer);
       };
 
       window.addEventListener("resize", handleResize);
@@ -107,13 +141,14 @@ const ResearchPage = () => {
   };
 
   const edgeTypes = {
+    default: DefaultEdge,
     downward: DownwardEdge,
   };
 
   const initialNodes = [
     {
       id: "1",
-      position: { x: 774, y: 500 },
+      position: { x: 791, y: 510 },
       type: "imageNode",
       data: {
         src: lablogo,
@@ -128,42 +163,78 @@ const ResearchPage = () => {
       id: "2",
       position: { x: 200, y: 900 },
       type: "customNode",
-      data: { label: "Biomechanics", icon: Biomechanics, showTarget: true },
+      data: {
+        label: "Biomechanics",
+        slug: "biomechanics",
+        icon: "Biomechanics",
+        description:
+          "Analyzing biomechanics via sensor-driven systems for movement, joint loading, and injury risk can guide guide rehabilitation, athletic training, etc.",
+        showTarget: true,
+      },
     },
     {
       id: "3",
       position: { x: 500, y: 900 },
       type: "customNode",
-      data: { label: "Cancer", icon: Cell, showTarget: true },
+      data: {
+        label: "Cancer",
+        slug: "cancer",
+        icon: "Cell",
+        description:
+          "Cancer detection/classification, risk profiling, and personalized treatment is improved by integrating genomic, imaging, and clinical data into clinical workflows.",
+        showTarget: true,
+      },
     },
     {
       id: "4",
       position: { x: 800, y: 900 },
       type: "customNode",
-      data: { label: "Cardiovascular", icon: Heart, showTarget: true },
+      data: {
+        label: "Cardiovascular",
+        slug: "cardiovascular",
+        icon: "Heart",
+        description:
+          "Automated ECG interpretation and respiratory function analysis using continuous wearable-based monitoring can support risk assessment for early intervention.",
+        showTarget: true,
+      },
     },
 
     {
       id: "5",
       position: { x: 1100, y: 900 },
       type: "customNode",
-      data: { label: "Neurology", icon: Brain, showTarget: true },
+      data: {
+        label: "Neurology",
+        slug: "neurology",
+        icon: "Brain",
+        description:
+          "Neuroimaging, speech, and gait analysis can enable early detection, classification, staging, and monitoring of neurological disorders.",
+        showTarget: true,
+      },
     },
 
     {
       id: "6",
       position: { x: 1400, y: 900 },
       type: "customNode",
-      data: { label: "Public Health", icon: Publichealth, showTarget: true },
+      data: {
+        label: "Public Health",
+        slug: "public-health",
+        icon: "Publichealth",
+        description:
+          "Enabling disease surveillance, predictive modeling, and digital literacy tools can help agencies improve community outreach and data-driven decision-making.",
+        showTarget: true,
+      },
     },
     {
       id: "7",
-      position: { x: 0, y: 350 },
+      position: { x: 0, y: 380 },
       type: "customNode",
       data: {
         label: "AI/ML",
+        slug: "ai-ml",
         showSource: true,
-        icon: Ai,
+        icon: "Ai",
         sourceLocation: "right",
         description:
           "AI/ML enable early disease detection, precision diagnostics, and personalized treatment by uncovering complex patterns in multimodal clinical data.",
@@ -175,7 +246,8 @@ const ResearchPage = () => {
       type: "customNode",
       data: {
         label: "Commercial Devices",
-        icon: Mobile,
+        slug: "commercial-devices",
+        icon: "Mobile",
         description:
           "Commercial devices like fitness trackers are becoming clinically relevant data sources, offering continuous monitoring to support remote care.",
         showSource: true,
@@ -187,7 +259,8 @@ const ResearchPage = () => {
       type: "customNode",
       data: {
         label: "Computer Vision",
-        icon: Vision,
+        slug: "computer-vision",
+        icon: "Vision",
         description:
           "Computer vision allows for interpreting medical images—such as MRI or CT—for classification and staging of disease presence or progression.",
         showSource: true,
@@ -199,7 +272,8 @@ const ResearchPage = () => {
       type: "customNode",
       data: {
         label: "Hardware & Sensors",
-        icon: Hardware,
+        slug: "hardware",
+        icon: "Hardware",
         description:
           "Novel hardware/sensor deployments can capture real-time physiological signals enabling continuous, high-resolution assessment of patient health.",
         showSource: true,
@@ -211,7 +285,8 @@ const ResearchPage = () => {
       type: "customNode",
       data: {
         label: "Human Computer Interaction",
-        icon: Hci,
+        slug: "hci",
+        icon: "Hci",
         description:
           "HCI for health focuses on designing intuitive interfaces that allow patients and clinicians to interact with technology without frustration or error.",
         iconid: "HCI-icon",
@@ -224,7 +299,8 @@ const ResearchPage = () => {
       type: "customNode",
       data: {
         label: "Natural Language Processing",
-        icon: Nlp,
+        slug: "nlp",
+        icon: "Nlp",
         description:
           "NLP is useful in extracting clinically meaningful insights from unstructured data such as physician notes, patient portals, and electronic health records.",
         showSource: true,
@@ -232,12 +308,13 @@ const ResearchPage = () => {
     },
     {
       id: "13",
-      position: { x: 1600, y: 350 },
+      position: { x: 1600, y: 380 },
       type: "customNode",
       data: {
         label: "Software",
+        slug: "software",
         showSource: true,
-        icon: Software,
+        icon: "Software",
         description:
           "Software design in health ensures that digital tools—such as dashboards, mobile apps, etc.—are usable, secure, and aligned with user needs.",
         sourceLocation: "left",
@@ -253,7 +330,6 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t1",
       type: "downward",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -263,7 +339,6 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t2",
       type: "downward",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -272,7 +347,7 @@ const ResearchPage = () => {
       target: "4",
       animated: true,
       sourceHandle: "t3",
-      style: { strokeWidth: sw },
+      type: "downward",
       className: `flow-edge`,
     },
     {
@@ -282,7 +357,6 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t4",
       type: "downward",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -292,7 +366,6 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t5",
       type: "downward",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -301,7 +374,6 @@ const ResearchPage = () => {
       target: "1",
       targetHandle: "s1",
       animated: true,
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -310,7 +382,6 @@ const ResearchPage = () => {
       target: "1",
       animated: true,
       targetHandle: "s2",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -318,7 +389,6 @@ const ResearchPage = () => {
       source: "9",
       target: "1",
       animated: true,
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -326,7 +396,6 @@ const ResearchPage = () => {
       source: "10",
       target: "1",
       animated: true,
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -334,7 +403,6 @@ const ResearchPage = () => {
       source: "11",
       target: "1",
       animated: true,
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -343,7 +411,6 @@ const ResearchPage = () => {
       target: "1",
       animated: true,
       targetHandle: "s3",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
     {
@@ -352,7 +419,6 @@ const ResearchPage = () => {
       target: "1",
       animated: true,
       targetHandle: "s4",
-      style: { strokeWidth: sw },
       className: `flow-edge`,
     },
   ];
@@ -392,27 +458,22 @@ const ResearchPage = () => {
   function highlightEdges(edgeIds) {
     requestAnimationFrame(() => {
       document.querySelectorAll(".flow-edge").forEach((el) => {
-        const testid = el.getAttribute("data-testid"); // e.g., "rf__edge-e1-4"
-        const path = el.querySelector(".react-flow__edge-path");
-        if (!path) return;
-
-        // Extract edge ID from testid
-        // Example: "rf__edge-e1-4" → "e1-4"
+        const testid = el.getAttribute("data-testid");
         const id = testid?.replace("rf__edge-", "");
         const edge = edges.find((e) => e.id === id);
 
+        if (!edge) return;
+
         if (edgeIds.includes(id)) {
+          el.classList.add("edge-highlight");
+
           if (edge.source === "1") {
-            path.style.stroke = "url(#edgeGradient2)";
+            el.classList.add("source-1");
           } else {
-            path.style.stroke = "url(#edgeGradient1)";
+            el.classList.remove("source-1");
           }
-          path.style.strokeWidth = "7";
-          path.style.filter = "drop-shadow(0 0 10px #7cb900)";
         } else {
-          path.style.stroke = "lightgray";
-          path.style.strokeWidth = "5";
-          path.style.filter = "drop-shadow(0 0 0px #fff)";
+          el.classList.remove("edge-highlight", "source-1");
         }
       });
     });
@@ -451,18 +512,90 @@ const ResearchPage = () => {
       </div>
       <h1 className="Research-header">Research</h1>
       <div className="Research-cards-grid">
-        <ResearchCard Icon={Ai} topic={"AI/ML"} />
-        <ResearchCard Icon={Biomechanics} topic={"Biomechanics"} />
-        <ResearchCard Icon={Cell} topic={"Cancer"} />
-        <ResearchCard Icon={Heart} topic={"Cardiology"} description={""} />
-        <ResearchCard Icon={Mobile} topic={"Commercial Devices"} />
-        <ResearchCard Icon={Vision} topic={"Computer Vision"} />
-        <ResearchCard Icon={Hardware} topic={"Hardware & Sensors"} />
-        <ResearchCard Icon={Hci} topic={"Human Computer Interaction"} />
-        <ResearchCard Icon={Nlp} topic={"Natural Language Processing"} />
-        <ResearchCard Icon={Brain} topic={"Neurology"} />
-        <ResearchCard Icon={Publichealth} topic={"Public Health"} />
-        <ResearchCard Icon={Software} topic={"Software"} />
+        <ResearchCard
+          Icon={Ai}
+          topic={"AI/ML"}
+          description={
+            "AI/ML enable early disease detection, precision diagnostics, and personalized treatment by uncovering complex patterns in multimodal clinical data."
+          }
+        />
+        <ResearchCard
+          Icon={Biomechanics}
+          topic={"Biomechanics"}
+          description={
+            "Analyzing biomechanics via sensor-driven systems for movement, joint loading, and injury risk can guide guide rehabilitation, athletic training, etc."
+          }
+        />
+        <ResearchCard
+          Icon={Cell}
+          topic={"Cancer"}
+          description={
+            "Cancer detection/classification, risk profiling, and personalized treatment is improved by integrating genomic, imaging, and clinical data into clinical workflows."
+          }
+        />
+        <ResearchCard
+          Icon={Heart}
+          topic={"Cardiovascular"}
+          description={
+            "Automated ECG interpretation and respiratory function analysis using continuous wearable-based monitoring can support risk assessment for early intervention."
+          }
+        />
+        <ResearchCard
+          Icon={Mobile}
+          topic={"Commercial Devices"}
+          description={
+            "Commercial devices like fitness trackers are becoming clinically relevant data sources, offering continuous monitoring to support remote care."
+          }
+        />
+        <ResearchCard
+          Icon={Vision}
+          topic={"Computer Vision"}
+          description={
+            "Computer vision allows for interpreting medical images—such as MRI or CT—for classification and staging of disease presence or progression."
+          }
+        />
+        <ResearchCard
+          Icon={Hardware}
+          topic={"Hardware & Sensors"}
+          description={
+            "Novel hardware/sensor deployments can capture real-time physiological signals enabling continuous, high-resolution assessment of patient health."
+          }
+        />
+        <ResearchCard
+          Icon={Hci}
+          topic={"Human Computer Interaction"}
+          description={
+            "HCI for health focuses on designing intuitive interfaces that allow patients and clinicians to interact with technology without frustration or error."
+          }
+        />
+        <ResearchCard
+          Icon={Nlp}
+          topic={"Natural Language Processing"}
+          description={
+            "NLP is useful in extracting clinically meaningful insights from unstructured data such as physician notes, patient portals, and electronic health records."
+          }
+        />
+        <ResearchCard
+          Icon={Brain}
+          topic={"Neurology"}
+          description={
+            "Neuroimaging, speech, and gait analysis can enable early detection, classification, staging, and monitoring of neurological disorders."
+          }
+        />
+        <ResearchCard
+          Icon={Publichealth}
+          topic={"Public Health"}
+          description={
+            "Enabling disease surveillance, predictive modeling, and digital literacy tools can help agencies improve community outreach and data-driven decision-making."
+          }
+        />
+        <ResearchCard
+          Icon={Software}
+          topic={"Software"}
+          description={
+            "Software design in health ensures that digital tools—such as dashboards, mobile apps, etc.—are usable, secure, and aligned with user needs."
+          }
+        />
       </div>
     </div>
   );
