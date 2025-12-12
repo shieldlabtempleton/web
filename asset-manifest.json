@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/web/static/css/main.8e1c4254.css",
-    "main.js": "/web/static/js/main.00386669.js",
+    "main.css": "/web/static/css/main.f0a2780d.css",
+    "main.js": "/web/static/js/main.4df38883.js",
     "static/js/453.4a359a8a.chunk.js": "/web/static/js/453.4a359a8a.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
@@ -9,16 +9,15 @@
     "static/media/mohamed.png": "/web/static/media/mohamed.3a045775ff7ff518090c.png",
     "static/media/samir.png": "/web/static/media/samir.b671777f22b4a1a7477b.png",
     "static/media/Photo_of_Anika_Anjum.jpg": "/web/static/media/Photo_of_Anika_Anjum.969fac2010a07abfea28.jpg",
-    "static/media/bbrain.jpeg": "/web/static/media/bbrain.ab8408a09379d0ddc6a0.jpeg",
     "static/media/102925-jm-rushitha-banner-01.jpg": "/web/static/media/102925-jm-rushitha-banner-01.249b7da574d03d5461a5.jpg",
     "static/media/mohamad-ebraheem-2.jpg": "/web/static/media/mohamad-ebraheem-2.1df3aed2086ddd2c8abd.jpg",
     "static/media/kayla.jpg": "/web/static/media/kayla.de4cbaa6ca1a1d7e5270.jpg",
     "static/media/rushitha.jpg": "/web/static/media/rushitha.573c40ee82e16f5abcce.jpg",
     "static/media/hanieh.jpg": "/web/static/media/hanieh.152a3a6137090964ccb0.jpg",
+    "static/media/gg.png": "/web/static/media/gg.67f4ee5ff87931491f24.png",
     "static/media/SHIELD.png": "/web/static/media/SHIELD.e07eb9f64fcfe6d68016.png",
     "static/media/1762009583769.jpeg": "/web/static/media/1762009583769.721804c5013181cf269f.jpeg",
     "static/media/usf_health_voice.png": "/web/static/media/usf_health_voice.bf5a8606543f543f1d79.png",
-    "static/media/ssoftware.jpg": "/web/static/media/ssoftware.17999c5774c8504e1c6b.jpg",
     "static/media/tarun.jpg": "/web/static/media/tarun.cb87d0ee6c8ea8e9e2f8.jpg",
     "static/media/moffitt_2c_rgb_logo.jpeg": "/web/static/media/moffitt_2c_rgb_logo.93683e7b1030d6532cc9.jpeg",
     "static/media/1643408680791.jpeg": "/web/static/media/1643408680791.847f959c2062ec747981.jpeg",
@@ -27,8 +26,6 @@
     "static/media/varun.jpeg": "/web/static/media/varun.a6874f71a5f701d17efb.jpeg",
     "static/media/DD_437x437.jpg": "/web/static/media/DD_437x437.fabd2c4540265d6bfd7f.jpg",
     "static/media/jay.jpeg": "/web/static/media/jay.57c7bf22044cab9a26c3.jpeg",
-    "static/media/ccancer.jpg": "/web/static/media/ccancer.55e5f514c21a4194fc23.jpg",
-    "static/media/vvision.jpg": "/web/static/media/vvision.28093a3ead97c03d94da.jpg",
     "static/media/tgh-logo.png": "/web/static/media/tgh-logo.9e87e470b99ef50fe5b4.png",
     "static/media/medical-color-horizontal-transparent.png": "/web/static/media/medical-color-horizontal-transparent.6e66ef9daed66ffeaf3f.png",
     "static/media/medical-white-vertical-transparent.png": "/web/static/media/medical-white-vertical-transparent.9f75d594a0122921e089.png",
@@ -36,8 +33,8 @@
     "static/media/construction.png": "/web/static/media/construction.f28a217afa12e68ebb80.png",
     "static/media/Op1-Bellini-caicc-green text-2c-rgb-h.png": "/web/static/media/Op1-Bellini-caicc-green text-2c-rgb-h.92fcd52644436c223e69.png",
     "static/media/USF_Bellini.png": "/web/static/media/USF_Bellini.c962b9b01c38862c8d7b.png",
+    "static/media/mg.jpeg": "/web/static/media/mg.20adf5f84542efa8a872.jpeg",
     "static/media/srikanth.jpeg": "/web/static/media/srikanth.0bd16e87f78250fb6af4.jpeg",
-    "static/media/aai.avif": "/web/static/media/aai.d8fb321738b1cd9ea825.avif",
     "static/media/Op1-Bellini-caicc-white-1c-rgb-h.png": "/web/static/media/Op1-Bellini-caicc-white-1c-rgb-h.2b8fc80fe15e227bf6f6.png",
     "static/media/defaultuser.png": "/web/static/media/defaultuser.544b19c283f29c44243c.png",
     "static/media/b2ai_voice.png": "/web/static/media/b2ai_voice.d26b53c9c3c10866bc8c.png",
@@ -54,12 +51,12 @@
     "static/media/vision.svg": "/web/static/media/vision.102e00f0813c3e7efda7d8cbd07a4520.svg",
     "static/media/mobile.svg": "/web/static/media/mobile.187addb8daf674ec4264d1a6b01eaf66.svg",
     "index.html": "/web/index.html",
-    "main.8e1c4254.css.map": "/web/static/css/main.8e1c4254.css.map",
-    "main.00386669.js.map": "/web/static/js/main.00386669.js.map",
+    "main.f0a2780d.css.map": "/web/static/css/main.f0a2780d.css.map",
+    "main.4df38883.js.map": "/web/static/js/main.4df38883.js.map",
     "453.4a359a8a.chunk.js.map": "/web/static/js/453.4a359a8a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e1c4254.css",
-    "static/js/main.00386669.js"
+    "static/css/main.f0a2780d.css",
+    "static/js/main.4df38883.js"
   ]
 }
