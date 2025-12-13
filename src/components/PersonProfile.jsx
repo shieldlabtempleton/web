@@ -1,15 +1,42 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import React, { useContext } from "react";
+import { useLocation, useParams } from "react-router-dom";
 import defaultphoto from "../assets/defaultuser.png";
 import { FaLinkedin, FaGoogleScholar } from "react-icons/fa6";
 import { TbWorldWww } from "react-icons/tb";
 import { IoMdMail } from "react-icons/io";
 import ReactMarkdown from "react-markdown";
+import { PeopleContext } from "../context/PeopleContext";
+import {
+  principalinvestigator as pi,
+  gradstudents as grad,
+  alumni as alumn,
+} from "../webdata/People";
 
 const PersonProfile = () => {
   const location = useLocation();
-  const person = location.state;
-  // const { slug } = useParams();
+  // const person = location.state;
+  const { slug } = useParams();
+  // const { pi, grad, alumn } = useContext(PeopleContext) || {};
+
+  const PEOPLE_MAP = {
+    "principal-investigator": pi[0],
+    "samir-ahmed": grad[0],
+    "hanieh-ajami": grad[1],
+    "anika-anjum": grad[2],
+    "venkata-cherukuri": grad[3],
+    "mohamed-ebraheem": grad[4],
+    "parsa-khorrami": grad[5],
+    "rushitha-mamidala": grad[6],
+    "srikanth-akkaru": grad[7],
+    "kayla-homatas": grad[8],
+    "jay-jariwala": grad[9],
+    "tarun-mannava": grad[10],
+    "kundan-sakkuru": grad[11],
+    "megan-tran": grad[12],
+  };
+
+  const person = PEOPLE_MAP[slug];
+
   return (
     <div className="Profile">
       <div className="Profile-photo-container">

@@ -198,7 +198,8 @@ export function DownwardEdge({ id, source, target, ...props }) {
 }
 
 export function DefaultEdge({ id, source, target, ...props }) {
-  const { sourceX, sourceY, targetX, targetY } = props;
+  const { sourceX, sourceY, targetX, targetY, sourcePosition, targetPosition } =
+    props;
 
   const bend = 120; // how far downward the curve goes
 
@@ -209,6 +210,8 @@ export function DefaultEdge({ id, source, target, ...props }) {
     targetY,
     sourceControlY: sourceY,
     targetControlY: targetY,
+    sourcePosition,
+    targetPosition,
   });
 
   return (

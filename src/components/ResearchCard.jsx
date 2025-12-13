@@ -1,8 +1,10 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-const ResearchCard = ({ Icon, topic, description }) => {
+const ResearchCard = ({ Icon, topic, description, data }) => {
+  const slug = `/research/${data?.slug}`;
   return (
-    <div className="Research-card-container">
+    <NavLink to={slug} className="Research-card-container">
       <div className="Research-card">
         <div className="front">
           <Icon className="Research-card-icon" />
@@ -16,7 +18,7 @@ const ResearchCard = ({ Icon, topic, description }) => {
           </p>
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

@@ -6,7 +6,7 @@ import { FaChevronRight } from "react-icons/fa6";
 
 const NewsSection = ({ newsarticles }) => {
   return (
-    <div className="News-section">
+    <section className="News-section">
       <div
         style={{
           display: "flex",
@@ -38,7 +38,7 @@ const NewsSection = ({ newsarticles }) => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -30,7 +30,7 @@ const PersonItem = ({
   const slug =
     role === "pi"
       ? `/people/principal-investigator`
-      : `/people/${firstname}-${lastname}`;
+      : `/people/${firstname.toLowerCase()}-${lastname.toLowerCase()}`;
   return (
     <div
       className="Person-container"

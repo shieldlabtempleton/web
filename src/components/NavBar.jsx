@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
 const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
@@ -7,9 +7,7 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
   const location = useLocation();
   const isHomeActive =
     location.pathname === "/" || location.pathname === "/news";
-  useEffect(() => {
-    console.log("isoverwhite2:", isOverWhite);
-  }, [isOverWhite]);
+  const menuRef = useRef(null);
 
   // function useScrollLock(locked) {
   //   useEffect(() => {
@@ -62,6 +60,9 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
     };
 
     const preventScroll = (e) => {
+      if (menuRef.current?.contains(e.target)) {
+        return; // allow scrolling inside menu
+      }
       e.preventDefault();
     };
 
@@ -82,7 +83,7 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
 
       // Calculate interpolated top
       let newTop = 140 - scrollY;
-      if (newTop < 50) newTop = 50; // clamp
+      // if (newTop < 50) newTop = 50; // clamp
 
       setTop(newTop);
     };
@@ -96,7 +97,6 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
       const windowheight = window.innerHeight;
       let newHeight = windowheight;
       setHeight(newHeight);
-      console.log(windowheight);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -122,6 +122,7 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
         <ul
           style={{ "--dyn-top": `${top}px`, "--dyn-height": `${height}px` }}
           className={`Main-menu-button-container ${isMenuOpen ? "active" : ""}`}
+          ref={menuRef}
         >
           <NavLink
             to="/"

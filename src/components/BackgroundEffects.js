@@ -5,7 +5,7 @@ const BackgroundEffects = () => {
     const particlesContainer = document.getElementById("particles-container");
     if (!particlesContainer) return;
 
-    const particleCount = 100;
+    const particleCount = 80;
 
     for (let i = 0; i < particleCount; i++) {
       createParticle();

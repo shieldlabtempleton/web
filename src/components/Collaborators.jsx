@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import Placeholder from "./Placeholder";
 import logo1 from "../assets/tgh-logo.png";
 import logo2 from "../assets/Op1-Bellini-caicc-green text-2c-rgb-h.png";
@@ -7,8 +7,14 @@ import logo4 from "../assets/moffitt_2c_rgb_logo.jpeg";
 import logo5 from "../assets/USF Health Logo3.png";
 import logo6 from "../assets/usf_health_voice.png";
 import logo7 from "../assets/b2ai_voice.png";
+import WOW from "wowjs";
 
 const Collaborators = () => {
+  useEffect(() => {
+    new WOW.WOW({
+      live: false,
+    }).init();
+  }, []);
   return (
     <div className="Collaborators">
       {/* <Placeholder /> */}

@@ -13,7 +13,7 @@ import { ReactComponent as Hardware } from "../assets/hardware.svg";
 import { ReactComponent as Nlp } from "../assets/nlp.svg";
 import { ReactComponent as Software } from "../assets/software.svg";
 import { ReactComponent as Hci } from "../assets/hci.svg";
-import ScrollDown from "./ScrollButton";
+import { ScrollDown } from "./ScrollButtons";
 import ReactFlow, {
   useReactFlow,
   useEdgesState,
@@ -24,6 +24,7 @@ import { CustomNode, ImageNode } from "./CustomNode";
 import StaticNode from "./StaticNode";
 import { DownwardEdge, DefaultEdge } from "./CustomEdges";
 import { biomechanics } from "../webdata/ResearchTopics";
+import { researchtopics } from "../webdata/ResearchTopics";
 
 const ResearchPage = () => {
   const sw = 5;
@@ -51,7 +52,6 @@ const ResearchPage = () => {
       const offsetX = (containerWidth - nodesWidth * 0.55) / 2;
 
       const offsetY = 15; // optional top padding
-      // console.log(left, right, nodesWidth, containerWidth);
 
       setViewport({
         x: offsetX,
@@ -137,7 +137,7 @@ const ResearchPage = () => {
 
   const nodeTypes = {
     imageNode: ImageNode,
-    customNode: CustomNode, // 👈 register the custom node
+    customNode: CustomNode,
     staticNode: StaticNode,
   };
 
@@ -164,163 +164,75 @@ const ResearchPage = () => {
       id: "2",
       position: { x: 200, y: 900 },
       type: "customNode",
-      data: {
-        label: "Biomechanics",
-        slug: "biomechanics",
-        icon: "Biomechanics",
-        description:
-          "Analyzing biomechanics via sensor-driven systems for movement, joint loading, and injury risk can guide guide rehabilitation, athletic training, etc.",
-        showTarget: true,
-        researchdata: biomechanics,
-      },
+      data: researchtopics["biomechanics"],
     },
     {
       id: "3",
       position: { x: 500, y: 900 },
       type: "customNode",
-      data: {
-        label: "Cancer",
-        slug: "cancer",
-        icon: "Cell",
-        description:
-          "Cancer detection/classification, risk profiling, and personalized treatment is improved by integrating genomic, imaging, and clinical data into clinical workflows.",
-        showTarget: true,
-      },
+      data: researchtopics["cancer"],
     },
     {
       id: "4",
       position: { x: 800, y: 900 },
       type: "customNode",
-      data: {
-        label: "Cardiovascular",
-        slug: "cardiovascular",
-        icon: "Heart",
-        description:
-          "Automated ECG interpretation and respiratory function analysis using continuous wearable-based monitoring can support risk assessment for early intervention.",
-        showTarget: true,
-      },
+      data: researchtopics["cardiovascular"],
     },
 
     {
       id: "5",
       position: { x: 1100, y: 900 },
       type: "customNode",
-      data: {
-        label: "Neurology",
-        slug: "neurology",
-        icon: "Brain",
-        description:
-          "Neuroimaging, speech, and gait analysis can enable early detection, classification, staging, and monitoring of neurological disorders.",
-        showTarget: true,
-      },
+      data: researchtopics["neurology"],
     },
 
     {
       id: "6",
       position: { x: 1400, y: 900 },
       type: "customNode",
-      data: {
-        label: "Public Health",
-        slug: "public-health",
-        icon: "Publichealth",
-        description:
-          "Enabling disease surveillance, predictive modeling, and digital literacy tools can help agencies improve community outreach and data-driven decision-making.",
-        showTarget: true,
-      },
+      data: researchtopics["publichealth"],
     },
     {
       id: "7",
       position: { x: 0, y: 380 },
       type: "customNode",
-      data: {
-        label: "AI/ML",
-        slug: "ai-ml",
-        showSource: true,
-        icon: "Ai",
-        sourceLocation: "right",
-        description:
-          "AI/ML enable early disease detection, precision diagnostics, and personalized treatment by uncovering complex patterns in multimodal clinical data.",
-      },
+      data: researchtopics["aiml"],
     },
     {
       id: "8",
       position: { x: 200, y: 100 },
       type: "customNode",
-      data: {
-        label: "Commercial Devices",
-        slug: "commercial-devices",
-        icon: "Mobile",
-        description:
-          "Commercial devices like fitness trackers are becoming clinically relevant data sources, offering continuous monitoring to support remote care.",
-        showSource: true,
-      },
+      data: researchtopics["commercialdevices"],
     },
     {
       id: "9",
       position: { x: 500, y: 0 },
       type: "customNode",
-      data: {
-        label: "Computer Vision",
-        slug: "computer-vision",
-        icon: "Vision",
-        description:
-          "Computer vision allows for interpreting medical images—such as MRI or CT—for classification and staging of disease presence or progression.",
-        showSource: true,
-      },
+      data: researchtopics["computervision"],
     },
     {
       id: "10",
       position: { x: 800, y: 0 },
       type: "customNode",
-      data: {
-        label: "Hardware & Sensors",
-        slug: "hardware",
-        icon: "Hardware",
-        description:
-          "Novel hardware/sensor deployments can capture real-time physiological signals enabling continuous, high-resolution assessment of patient health.",
-        showSource: true,
-      },
+      data: researchtopics["hardware"],
     },
     {
       id: "11",
       position: { x: 1100, y: 0 },
       type: "customNode",
-      data: {
-        label: "Human Computer Interaction",
-        slug: "hci",
-        icon: "Hci",
-        description:
-          "HCI for health focuses on designing intuitive interfaces that allow patients and clinicians to interact with technology without frustration or error.",
-        iconid: "HCI-icon",
-        showSource: true,
-      },
+      data: researchtopics["hci"],
     },
     {
       id: "12",
       position: { x: 1400, y: 100 },
       type: "customNode",
-      data: {
-        label: "Natural Language Processing",
-        slug: "nlp",
-        icon: "Nlp",
-        description:
-          "NLP is useful in extracting clinically meaningful insights from unstructured data such as physician notes, patient portals, and electronic health records.",
-        showSource: true,
-      },
+      data: researchtopics["nlp"],
     },
     {
       id: "13",
       position: { x: 1600, y: 380 },
       type: "customNode",
-      data: {
-        label: "Software",
-        slug: "software",
-        showSource: true,
-        icon: "Software",
-        description:
-          "Software design in health ensures that digital tools—such as dashboards, mobile apps, etc.—are usable, secure, and aligned with user needs.",
-        sourceLocation: "left",
-      },
+      data: researchtopics["software"],
     },
   ];
 
@@ -490,8 +402,15 @@ const ResearchPage = () => {
   return (
     <div className="Research">
       {/* <Placeholder /> */}
-      <ScrollDown classname={"Scroll-anim-container"} />
-      <ScrollDown classname={"Scroll-anim-container"} id={"Scroll2"} />
+      <ScrollDown
+        classname={"Scroll-anim-container"}
+        sectionid={"page-bottom-sentinel"}
+      />
+      <ScrollDown
+        classname={"Scroll-anim-container"}
+        sectionid={"page-bottom-sentinel"}
+        id={"Scroll2"}
+      />
       <div className="React-flow-container">
         <ReactFlow
           nodes={nodes}
@@ -517,88 +436,77 @@ const ResearchPage = () => {
         <ResearchCard
           Icon={Ai}
           topic={"AI/ML"}
-          description={
-            "AI/ML enable early disease detection, precision diagnostics, and personalized treatment by uncovering complex patterns in multimodal clinical data."
-          }
+          description={researchtopics["aiml"].description}
+          data={researchtopics["aiml"]}
         />
         <ResearchCard
           Icon={Biomechanics}
           topic={"Biomechanics"}
-          description={
-            "Analyzing biomechanics via sensor-driven systems for movement, joint loading, and injury risk can guide guide rehabilitation, athletic training, etc."
-          }
+          description={researchtopics["biomechanics"].description}
+          data={researchtopics["biomechanics"]}
         />
         <ResearchCard
           Icon={Cell}
           topic={"Cancer"}
-          description={
-            "Cancer detection/classification, risk profiling, and personalized treatment is improved by integrating genomic, imaging, and clinical data into clinical workflows."
-          }
+          description={researchtopics["cancer"].description}
+          data={researchtopics["cancer"]}
         />
         <ResearchCard
           Icon={Heart}
           topic={"Cardiovascular"}
-          description={
-            "Automated ECG interpretation and respiratory function analysis using continuous wearable-based monitoring can support risk assessment for early intervention."
-          }
+          description={researchtopics["cardiovascular"].description}
+          data={researchtopics["cardiovascular"]}
         />
         <ResearchCard
           Icon={Mobile}
           topic={"Commercial Devices"}
-          description={
-            "Commercial devices like fitness trackers are becoming clinically relevant data sources, offering continuous monitoring to support remote care."
-          }
+          description={researchtopics["commercialdevices"].description}
+          data={researchtopics["commercialdevices"]}
         />
         <ResearchCard
           Icon={Vision}
           topic={"Computer Vision"}
-          description={
-            "Computer vision allows for interpreting medical images—such as MRI or CT—for classification and staging of disease presence or progression."
-          }
+          description={researchtopics["computervision"].description}
+          data={researchtopics["computervision"]}
         />
         <ResearchCard
           Icon={Hardware}
           topic={"Hardware & Sensors"}
-          description={
-            "Novel hardware/sensor deployments can capture real-time physiological signals enabling continuous, high-resolution assessment of patient health."
-          }
+          description={researchtopics["hardware"].description}
+          data={researchtopics["hardware"]}
         />
         <ResearchCard
           Icon={Hci}
           topic={"Human Computer Interaction"}
-          description={
-            "HCI for health focuses on designing intuitive interfaces that allow patients and clinicians to interact with technology without frustration or error."
-          }
+          description={researchtopics["hci"].description}
+          data={researchtopics["hci"]}
         />
         <ResearchCard
           Icon={Nlp}
           topic={"Natural Language Processing"}
-          description={
-            "NLP is useful in extracting clinically meaningful insights from unstructured data such as physician notes, patient portals, and electronic health records."
-          }
+          description={researchtopics["nlp"].description}
+          data={researchtopics["nlp"]}
         />
         <ResearchCard
           Icon={Brain}
           topic={"Neurology"}
-          description={
-            "Neuroimaging, speech, and gait analysis can enable early detection, classification, staging, and monitoring of neurological disorders."
-          }
+          description={researchtopics["neurology"].description}
+          data={researchtopics["neurology"]}
         />
         <ResearchCard
           Icon={Publichealth}
           topic={"Public Health"}
-          description={
-            "Enabling disease surveillance, predictive modeling, and digital literacy tools can help agencies improve community outreach and data-driven decision-making."
-          }
+          description={researchtopics["publichealth"].description}
+          data={researchtopics["publichealth"]}
         />
         <ResearchCard
           Icon={Software}
           topic={"Software"}
-          description={
-            "Software design in health ensures that digital tools—such as dashboards, mobile apps, etc.—are usable, secure, and aligned with user needs."
-          }
+          description={researchtopics["publichealth"].description}
+          data={researchtopics["publichealth"]}
         />
       </div>
+      <div id="page-bottom-sentinel" style={{ height: "1px" }}></div>
     </div>
   );
 };

@@ -18,6 +18,8 @@ import "react-toastify/dist/ReactToastify.css";
 import ResearchTopicsPage from "./components/ResearchTopicsPage";
 import NewsFullPage from "./components/NewsFullPage";
 import "animate.css/animate.min.css";
+import { PeopleProvider } from "./context/PeopleContext";
+import { ResearchProvider } from "./context/ResearchContext";
 // import NewsFullPage from "./components/NewsFullPage";
 // import SiteFooter from "./components/SiteFooter";
 
