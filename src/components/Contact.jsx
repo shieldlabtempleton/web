@@ -1,10 +1,12 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Placeholder from "./Placeholder";
 import emailjs from "@emailjs/browser";
 import lablogo from "../assets/SHIELD.png";
 import { toast } from "react-toastify";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
   const refForm = useRef();
   const sendEmail = (e) => {
     e.preventDefault();
@@ -32,10 +34,12 @@ const Contact = () => {
       {/* <Placeholder /> */}
       <div className="Contact-container">
         <div className="Contact-container-left-side">
-          <h1 className="Contact-header">CONTACT</h1>
+          <h1 className={`Contact-header ${theme === "light" ? "" : "dark"}`}>
+            CONTACT
+          </h1>
           <img alt="" src={lablogo} className="Contact-lab-logo" />
         </div>
-        <div className="Contact-form">
+        <div className={`Contact-form ${theme === "light" ? "" : "dark"}`}>
           <form ref={refForm} onSubmit={sendEmail}>
             <ul id="Contact-form">
               <li className="Contact-identifier">

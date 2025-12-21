@@ -11,8 +11,10 @@ import {
   gradstudents as grad,
   alumni as alumn,
 } from "../webdata/People";
+import { ThemeContext } from "../context/ThemeContext";
 
 const PersonProfile = () => {
+  const { theme } = useContext(ThemeContext);
   const location = useLocation();
   // const person = location.state;
   const { slug } = useParams();
@@ -45,39 +47,55 @@ const PersonProfile = () => {
           src={person.photo ? person.photo : defaultphoto}
           alt=""
         />
-        <p className="Profile-name">
+        <p className={`Profile-name ${theme === "light" ? "" : "dark"}`}>
           {person.title} {person.firstname} {person.middleinitial}{" "}
           {person.lastname}
           {person.role === "pi" ? null : ","} {person.suffix}
         </p>
-        <div className="Profile-links-container">
+        <div
+          className={`Profile-links-container ${
+            theme === "light" ? "" : "dark"
+          }`}
+        >
           {person.email ? (
             <a
               href={`mailto:${person.email}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IoMdMail className="Profile-links" id="Email-icon" />
+              <IoMdMail
+                className="Profile-links"
+                id={`${theme === "light" ? "Email-icon" : ""}`}
+              />
             </a>
           ) : null}
           {person.linkedin ? (
             <a href={person.linkedin} target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="Profile-links" id="Linkedin-icon" />
+              <FaLinkedin
+                className="Profile-links"
+                id={`${theme === "light" ? "Linkedin-icon" : ""}`}
+              />
             </a>
           ) : null}
           {person.gscholar ? (
             <a href={person.gscholar} target="_blank" rel="noopener noreferrer">
-              <FaGoogleScholar className="Profile-links" id="Gscholar-icon" />
+              <FaGoogleScholar
+                className="Profile-links"
+                id={`${theme === "light" ? "Gscholar-icon" : ""}`}
+              />
             </a>
           ) : null}
           {person.website ? (
             <a href={person.website} target="_blank" rel="noopener noreferrer">
-              <TbWorldWww className="Profile-links" id="Website-icon" />
+              <TbWorldWww
+                className="Profile-links"
+                id={`${theme === "light" ? "Website-icon" : ""}`}
+              />
             </a>
           ) : null}
         </div>
       </div>
-      <div className="Profile-content">
+      <div className={`Profile-content ${theme === "light" ? "" : "dark"}`}>
         {person.career ? (
           <div className="Profile-section">
             <h1 className="Profile-header">Career Profile</h1>

@@ -5,7 +5,7 @@ import Wave from "./styles/Waves";
 import HomePage from "./components/HomePage";
 import PublicationsPage from "./components/PublicationsPage";
 import PeoplePage from "./components/PeoplePage";
-import { useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import BackgroundEffects from "./components/BackgroundEffects";
 import ScrollToTop from "./components/ScrollToTop";
@@ -20,14 +20,25 @@ import NewsFullPage from "./components/NewsFullPage";
 import "animate.css/animate.min.css";
 import { PeopleProvider } from "./context/PeopleContext";
 import { ResearchProvider } from "./context/ResearchContext";
+import { ThemeContext, ThemeProvider } from "./context/ThemeContext";
+import ThemeToggle from "./components/ThemeToggle";
+import SiteFooterAlt from "./components/SiteFooterAlt";
 // import NewsFullPage from "./components/NewsFullPage";
 // import SiteFooter from "./components/SiteFooter";
 
 function App() {
   const [isOverWhite, setIsOverWhite] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme } = useContext(ThemeContext);
+  useEffect(() => {
+    const root = document.documentElement; // <html>
+
+    root.classList.remove("light", "dark");
+    root.classList.add(theme !== "light" ? "dark" : "light");
+  }, [theme]);
   return (
-    <div className="App">
+    <div className={`App ${theme === "light" ? "" : "dark"}`}>
+      {/* <ThemeToggle /> */}
       <ScrollToTop />
       <BackgroundEffects />
       <Wave isOverWhite={isOverWhite} setIsOverWhite={setIsOverWhite}></Wave>
@@ -50,6 +61,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+      <SiteFooterAlt />
       <ToastContainer
         position="top-right"
         autoClose={3000} // 3 seconds

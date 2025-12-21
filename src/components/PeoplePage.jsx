@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import PersonItem from "./PersonItem";
 import { gradstudents, principalinvestigator, alumni } from "../webdata/People";
+import { ThemeContext } from "../context/ThemeContext";
 
 const PeoplePage = () => {
+  const { theme } = useContext(ThemeContext);
   return (
-    <div className="People">
+    <div className={`People ${theme === "light" ? "" : "dark"}`}>
       <h1 className="People-header" id="Ph1">
         Principal Investigator
       </h1>

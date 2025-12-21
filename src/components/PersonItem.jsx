@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import defaultphoto from "../assets/defaultuser.png";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 
 const PersonItem = ({
   photo,
@@ -31,17 +32,21 @@ const PersonItem = ({
     role === "pi"
       ? `/people/principal-investigator`
       : `/people/${firstname.toLowerCase()}-${lastname.toLowerCase()}`;
+
+  const { theme } = useContext(ThemeContext);
   return (
     <div
-      className="Person-container"
+      className={`Person-container ${theme === "light" ? "" : "dark"}`}
       id={
-        role === "pi"
+        role === "pi" && theme === "light"
           ? "pi-photo"
-          : role === "phd-student"
+          : role === "phd-student" && theme === "light"
           ? "phd-student-photo"
-          : role === "msc-student"
+          : role === "msc-student" && theme === "light"
           ? "msc-student-photo"
-          : "alumni-photo"
+          : role === "alumni" && theme === "light"
+          ? "alumni-photo"
+          : null
       }
     >
       {role === "alumni" ? (

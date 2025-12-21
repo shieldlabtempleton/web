@@ -5,11 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 import "animate.css/animate.min.css";
+import { ThemeProvider } from "./context/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HashRouter>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </HashRouter>
 );
 

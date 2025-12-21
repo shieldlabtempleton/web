@@ -1,11 +1,14 @@
 import React from "react";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
 
 const ResearchCard = ({ Icon, topic, description, data }) => {
+  const { theme } = useContext(ThemeContext);
   const slug = `/research/${data?.slug}`;
   return (
     <NavLink to={slug} className="Research-card-container">
-      <div className="Research-card">
+      <div className={`Research-card ${theme === "light" ? "" : "dark"}`}>
         <div className="front">
           <Icon className="Research-card-icon" />
           <h1 className="Research-card-topic">{topic}</h1>

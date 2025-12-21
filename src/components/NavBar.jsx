@@ -1,7 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { ThemeContext } from "../context/ThemeContext";
+import ThemeToggle from "./ThemeToggle";
 
 const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
+  const { theme } = useContext(ThemeContext);
   const [top, setTop] = useState(140);
   const [height, setHeight] = useState(window.innerHeight - 140);
   const location = useLocation();
@@ -109,7 +112,11 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         />
       )}
-      <div className={`Main-menu  ${isMenuOpen ? "active" : ""}`}>
+      <div
+        className={`Main-menu  ${isMenuOpen ? "active" : ""} ${
+          theme === "light" ? "" : "dark"
+        }`}
+      >
         <div
           className={`Navbar-toggle ${isMenuOpen ? "open" : ""}`}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -121,7 +128,9 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
         </div>
         <ul
           style={{ "--dyn-top": `${top}px`, "--dyn-height": `${height}px` }}
-          className={`Main-menu-button-container ${isMenuOpen ? "active" : ""}`}
+          className={`Main-menu-button-container ${
+            isMenuOpen ? "active" : ""
+          } ${theme === "light" ? "" : "dark"}`}
           ref={menuRef}
         >
           <NavLink
@@ -191,6 +200,7 @@ const NavBar = ({ isOverWhite, isMenuOpen, setIsMenuOpen }) => {
           </NavLink>
         </ul>
       </div>
+      <ThemeToggle />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import lablogo from "../assets/SHIELD.png";
 import piphoto from "../assets/Templeton.png";
 import medicallogo from "../assets/medical-white-vertical-transparent.png";
@@ -6,14 +6,16 @@ import bellinilogo from "../assets/Op1-Bellini-caicc-white-1c-rgb-h.png";
 import NewsItem from "./NewsItem";
 import newsarticles from "../webdata/NewsArticles";
 import NewsSection from "./NewsSection";
+import { ThemeContext } from "../context/ThemeContext";
 
 const HomePage = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="Home">
-      <div className="Home-intro">
+      <div className={`Home-intro ${theme === "light" ? "" : "dark"}`}>
         <div>
           <img src={lablogo} className="Lab-logo" alt="" />
-          <p className="Lab-title">
+          <p className={`Lab-title ${theme === "light" ? "" : "dark"}`}>
             SMARTER HEALTH <br /> INNOVATING, ENABLING & LINKING DEVICES
           </p>
         </div>
@@ -29,7 +31,11 @@ const HomePage = () => {
             conditions, are being actively integrated to drive innovation in the
             following areas
           </p>
-          <ul className="horizontal-numbered-list">
+          <ul
+            className={`horizontal-numbered-list ${
+              theme === "light" ? "" : "dark"
+            }`}
+          >
             <li>
               Developing new assessment tools that will maximize data quality
               (e.g., making tools for all that minimize human error and maximize
@@ -48,14 +54,20 @@ const HomePage = () => {
           </ul>
         </div>
       </div>
-      <div className="Principal-investigator">
+      <div
+        className={`Principal-investigator ${theme === "light" ? "" : "dark"}`}
+      >
         <div class="Pi-content-container">
-          <h1 className="Pi-header">Principal Investigator</h1>
+          <h1 className={`Pi-header ${theme === "light" ? "" : "dark"}`}>
+            Principal Investigator
+          </h1>
           <div className="Inner-pi-content-container">
             <div className="Pi-photo-container">
               <img src={piphoto} className="Pi-photo" alt="" />
-              <span className="Pi-name">Dr. John M. Templeton</span>
-              <span className="Pi-title">
+              <span className={`Pi-name ${theme === "light" ? "" : "dark"}`}>
+                Dr. John M. Templeton
+              </span>
+              <span className={`Pi-title ${theme === "light" ? "" : "dark"}`}>
                 Assitant Professor <br /> Computer Science and Engineering
               </span>
             </div>

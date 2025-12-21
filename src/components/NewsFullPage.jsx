@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import NewsItem from "./NewsItem";
+import { ThemeContext } from "../context/ThemeContext";
+import newsarticles from "../webdata/NewsArticles";
 
 const NewsFullPage = () => {
-  const location = useLocation();
-  const news = location.state;
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="News-article-page">
-      <h1 className="News-fp-header">News</h1>
+      <h1 className={`News-fp-header ${theme === "light" ? "" : "dark"}`}>
+        News
+      </h1>
       <div className="News-list">
-        {news.map((article, index) => (
+        {newsarticles.map((article, index) => (
           <NewsItem
             key={index}
             thumbnail={article.thumbnail}

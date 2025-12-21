@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import {
   BaseEdge,
   getBezierPath,
   getSmoothStepPath,
   EdgeProps,
 } from "reactflow";
+import { ThemeContext } from "../context/ThemeContext";
 
 const CARD_MAP = {
   1: [
@@ -52,6 +54,11 @@ function Shadow() {
 
 export function DownwardEdge({ id, source, target, ...props }) {
   const { sourceX, sourceY, targetX, targetY } = props;
+  const { theme } = useContext(ThemeContext);
+  const colorscheme =
+    theme === "light"
+      ? "#9ccb3b;#9ccb3b;#006747;#006747;#9ccb3b"
+      : "white;white;lightgray;lightgray;white";
 
   const bend = 120; // how far downward the curve goes
 
@@ -102,7 +109,7 @@ export function DownwardEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.3; 0.4; 0.9; 1"
-          values="#9ccb3b;#9ccb3b;#006747;#006747;#9ccb3b"
+          values={colorscheme}
           begin={"2.5s"}
         />
       </circle>
@@ -131,7 +138,7 @@ export function DownwardEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.3; 0.4; 0.9; 1"
-          values="#9ccb3b;#9ccb3b;#006747;#006747;#9ccb3b"
+          values={colorscheme}
           begin={"3.5s"}
         />
       </circle>
@@ -160,7 +167,7 @@ export function DownwardEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.3; 0.4; 0.9; 1"
-          values="#9ccb3b;#9ccb3b;#006747;#006747;#9ccb3b"
+          values={colorscheme}
           begin={"4.5s"}
         />
       </circle>
@@ -189,7 +196,7 @@ export function DownwardEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.3; 0.4; 0.9; 1"
-          values="#9ccb3b;#9ccb3b;#006747;#006747;#9ccb3b"
+          values={colorscheme}
           begin={"5.5s"}
         />
       </circle>
@@ -198,6 +205,11 @@ export function DownwardEdge({ id, source, target, ...props }) {
 }
 
 export function DefaultEdge({ id, source, target, ...props }) {
+  const { theme } = useContext(ThemeContext);
+  const colorscheme2 =
+    theme === "light"
+      ? "#006747;#9ccb3b;#9ccb3b;#006747;#006747"
+      : "lightgray;white;white;lightgray;lightgray";
   const { sourceX, sourceY, targetX, targetY, sourcePosition, targetPosition } =
     props;
 
@@ -240,7 +252,7 @@ export function DefaultEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.4; 0.6; 0.9; 1"
-          values="#006747;#9ccb3b;#9ccb3b;#006747;#006747"
+          values={colorscheme2}
         />
       </circle>
 
@@ -268,7 +280,7 @@ export function DefaultEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.4; 0.6; 0.9; 1"
-          values="#006747;#9ccb3b;#9ccb3b;#006747;#006747"
+          values={colorscheme2}
           begin={"0.5s"}
         />
       </circle>
@@ -297,7 +309,7 @@ export function DefaultEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.4; 0.6; 0.9; 1"
-          values="#006747;#9ccb3b;#9ccb3b;#006747;#006747"
+          values={colorscheme2}
           begin={"1s"}
         />
       </circle>
@@ -326,7 +338,7 @@ export function DefaultEdge({ id, source, target, ...props }) {
           repeatCount="indefinite"
           calcMode="linear"
           keyTimes="0; 0.4; 0.6; 0.9; 1"
-          values="#006747;#9ccb3b;#9ccb3b;#006747;#006747"
+          values={colorscheme2}
           begin={"1.5s"}
         />
       </circle>

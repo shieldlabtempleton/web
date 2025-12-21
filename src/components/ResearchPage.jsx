@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useContext, useEffect, useLayoutEffect } from "react";
 import lablogo from "../assets/SHIELD.png";
 import ResearchCard from "./ResearchCard";
 import { ReactComponent as Heart } from "../assets/heart.svg";
@@ -23,12 +23,11 @@ import "reactflow/dist/style.css";
 import { CustomNode, ImageNode } from "./CustomNode";
 import StaticNode from "./StaticNode";
 import { DownwardEdge, DefaultEdge } from "./CustomEdges";
-import { biomechanics } from "../webdata/ResearchTopics";
 import { researchtopics } from "../webdata/ResearchTopics";
+import { ThemeContext } from "../context/ThemeContext";
 
 const ResearchPage = () => {
-  const sw = 5;
-  const opac = 0;
+  const { theme } = useContext(ThemeContext);
 
   function CenterHorizontally({ nodes }) {
     const { setViewport } = useReactFlow();
@@ -129,6 +128,14 @@ const ResearchPage = () => {
           <linearGradient id="edgeGradient2" gradientTransform="rotate(90)">
             <stop offset="0%" stopColor="#9ccb3b" />
             <stop offset="100%" stopColor="#005432" />
+          </linearGradient>
+          <linearGradient id="edgeGradient3" gradientTransform="rotate(90)">
+            <stop offset="0%" stopColor="lightgray" />
+            <stop offset="100%" stopColor="white" />
+          </linearGradient>
+          <linearGradient id="edgeGradient4" gradientTransform="rotate(90)">
+            <stop offset="0%" stopColor="white" />
+            <stop offset="100%" stopColor="lightgray" />
           </linearGradient>
         </defs>
       </svg>
@@ -244,7 +251,7 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t1",
       type: "downward",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e1-3",
@@ -253,7 +260,7 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t2",
       type: "downward",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e1-4",
@@ -262,7 +269,7 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t3",
       type: "downward",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e1-5",
@@ -271,7 +278,7 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t4",
       type: "downward",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e1-6",
@@ -280,7 +287,7 @@ const ResearchPage = () => {
       animated: true,
       sourceHandle: "t5",
       type: "downward",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e7-1",
@@ -288,7 +295,7 @@ const ResearchPage = () => {
       target: "1",
       targetHandle: "s1",
       animated: true,
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e8-1",
@@ -296,28 +303,28 @@ const ResearchPage = () => {
       target: "1",
       animated: true,
       targetHandle: "s2",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e9-1",
       source: "9",
       target: "1",
       animated: true,
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e10-1",
       source: "10",
       target: "1",
       animated: true,
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e11-1",
       source: "11",
       target: "1",
       animated: true,
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e12-1",
@@ -325,7 +332,7 @@ const ResearchPage = () => {
       target: "1",
       animated: true,
       targetHandle: "s3",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
     {
       id: "e13-1",
@@ -333,7 +340,7 @@ const ResearchPage = () => {
       target: "1",
       animated: true,
       targetHandle: "s4",
-      className: `flow-edge`,
+      className: `flow-edge ${theme === "light" ? "" : "dark"}`,
     },
   ];
 
@@ -399,6 +406,16 @@ const ResearchPage = () => {
     return () => window.removeEventListener("highlight-edges", handler);
   }, []);
 
+  useEffect(() => {
+    document.querySelectorAll(".flow-edge").forEach((el) => {
+      if (theme === "light") {
+        el.classList.remove("dark");
+      } else {
+        el.classList.add("dark");
+      }
+    });
+  }, [theme]);
+
   return (
     <div className="Research">
       {/* <Placeholder /> */}
@@ -411,7 +428,7 @@ const ResearchPage = () => {
         sectionid={"page-bottom-sentinel"}
         id={"Scroll2"}
       />
-      <div className="React-flow-container">
+      <section className="React-flow-container">
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -430,8 +447,10 @@ const ResearchPage = () => {
           <AutoFitViewOnResize />
           <EdgeGradient />
         </ReactFlow>
-      </div>
-      <h1 className="Research-header">Research</h1>
+      </section>
+      <h1 className={`Research-header ${theme === "light" ? "" : "dark"}`}>
+        Research
+      </h1>
       <div className="Research-cards-grid">
         <ResearchCard
           Icon={Ai}
@@ -506,7 +525,10 @@ const ResearchPage = () => {
           data={researchtopics["publichealth"]}
         />
       </div>
-      <div id="page-bottom-sentinel" style={{ height: "1px" }}></div>
+      <div
+        id="page-bottom-sentinel"
+        style={{ height: "1px", width: "100%" }}
+      ></div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 function interpolatePath(d1, d2, t) {
   // Simple linear interpolation between corresponding numbers in the path strings
@@ -18,6 +19,7 @@ function interpolatePath(d1, d2, t) {
 function Wave({ children, isOverWhite, setIsOverWhite }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [width, setWidth] = useState(window.innerWidth);
+  const { theme } = useContext(ThemeContext);
 
   const maxScroll = 190; // Scroll threshold to reach flat wave
 
@@ -99,8 +101,14 @@ function Wave({ children, isOverWhite, setIsOverWhite }) {
             y2="0"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0%" stopColor="#009374" />
-            <stop offset="100%" stopColor="#006747" />
+            <stop
+              offset="0%"
+              stopColor={`${theme === "light" ? "#009374" : "#212121"}`}
+            />
+            <stop
+              offset="100%"
+              stopColor={`${theme === "light" ? "#006747" : "#141414"}`}
+            />
           </linearGradient>
         </defs>
 

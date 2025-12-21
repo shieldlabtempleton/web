@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactMarkdown from "react-markdown";
 import { FaGoogleScholar } from "react-icons/fa6";
+import { ThemeContext } from "../context/ThemeContext";
 
 const PublicationsPage = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div className="Publications">
       <div
@@ -13,7 +15,11 @@ const PublicationsPage = () => {
           // background: "red",
         }}
       >
-        <h1 className="Publications-header">Publications</h1>
+        <h1
+          className={`Publications-header ${theme === "light" ? "" : "dark"}`}
+        >
+          Publications
+        </h1>
         <a
           style={{ position: "absolute", right: 0, top: 32 }}
           href={
@@ -31,8 +37,10 @@ const PublicationsPage = () => {
           /> */}
         </a>
       </div>
-      <h2 className="Publication-year">2025</h2>
-      <ul className="Publication-group">
+      <h2 className={`Publication-year ${theme === "light" ? "" : "dark"}`}>
+        2025
+      </h2>
+      <ul className={`Publication-group ${theme === "light" ? "" : "dark"}`}>
         <li>
           Md Mezbahul Islam, John Michael Templeton, Masrur Sobhan, Christian
           Poellabauer, and Ananda Mondal,{" "}
@@ -126,8 +134,10 @@ const PublicationsPage = () => {
           June 2025.
         </li>
       </ul>
-      <h2 className="Publication-year">2024</h2>
-      <ul className="Publication-group">
+      <h2 className={`Publication-year ${theme === "light" ? "" : "dark"}`}>
+        2024
+      </h2>
+      <ul className={`Publication-group ${theme === "light" ? "" : "dark"}`}>
         <li className="Publication-item">
           Rahmina Rubaiat, John Michael Templeton, Sandra Schneider, Samaneh
           Madanian, Upeka Madhavi De Silva Kalumith, Christian Poellabauer{" "}
@@ -186,8 +196,10 @@ const PublicationsPage = () => {
           (BIBM ’24 Workshop) ‑ Virtual Conference ‑ November 2024.
         </li>
       </ul>
-      <h2 className="Publication-year">2023</h2>
-      <ul className="Publication-group">
+      <h2 className={`Publication-year ${theme === "light" ? "" : "dark"}`}>
+        2023
+      </h2>
+      <ul className={`Publication-group ${theme === "light" ? "" : "dark"}`}>
         <li className="Publication-item">
           Enshi Zhang, Rafael Trujillo, John Michael Templeton, and Christian
           Poellabauer{" "}

@@ -1,8 +1,9 @@
 // CustomNode.js
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import { Handle, Position } from "reactflow";
 import { NavLink } from "react-router-dom";
 import * as Icons from "./Icons";
+import { ThemeContext } from "../context/ThemeContext";
 
 const CARD_MAP = {
   1: [
@@ -49,6 +50,7 @@ const ICON_MAP = {
 };
 
 export function CustomNode({ id, data }) {
+  const { theme } = useContext(ThemeContext);
   const Icon = ICON_MAP[data.icon];
   const slug = `/research/${data.slug}`;
 
@@ -70,7 +72,7 @@ export function CustomNode({ id, data }) {
       onMouseLeave={onLeave}
       className="Research-card-container-2"
     >
-      <div className="Research-card">
+      <div className={`Research-card ${theme === "light" ? "" : "dark"}`}>
         <div className="front">
           {data.icon ? (
             <Icon className="Research-card-icon-2" id={data.iconid} />

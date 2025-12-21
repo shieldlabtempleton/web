@@ -3,10 +3,14 @@ import { useState, useEffect, useLayoutEffect } from "react";
 export function ScrollDown(props) {
   const [hide, setHide] = useState(false);
   const handleClick = () => {
-    const el = document.getElementById(props.sectionid);
+    const el = document.getElementById("page-bottom-sentinel");
     if (!el) return;
 
-    el.scrollIntoView({ behavior: "smooth" });
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
   };
   useEffect(() => {
     const sentinel = document.getElementById("page-bottom-sentinel");
@@ -16,6 +20,8 @@ export function ScrollDown(props) {
       (entries) => {
         const entry = entries[0];
         setHide(entry.isIntersecting); // hide when bottom is visible
+        console.log(props.sectionid);
+        console.log(entry.isIntersecting);
       },
       {
         root: null, // viewport

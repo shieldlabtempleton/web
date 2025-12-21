@@ -2,10 +2,45 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+html.light {
+  --bg: linear-gradient(to right, #009374 0%, #006747 100%);
+}
+
+html.light:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: linear-gradient(to right, #009374 0%, #006747 100%);
+  z-index: -1;
+}
+
+html.dark {
+  --bg: linear-gradient(to right, #212121 0%, #141414 100%);
+}
+
+html.dark:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: linear-gradient(to right, #212121 0%, #141414 100%);
+  z-index: -1;
+}
+
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+}
+
 .App {
   text-align: center;
-  background-color: white;
+  background: white;
   /* overflow: hidden; */
+}
+
+.App.dark {
+  background: #212121;
 }
 
 .react-flow__pane,
@@ -30,6 +65,10 @@ html {
   pointer-events: none;
 }
 
+.flow-edge.dark .react-flow__edge-path {
+  color: gray;
+}
+
 .flow-edge .react-flow__edge-interaction {
   pointer-events: none;
 }
@@ -45,6 +84,10 @@ html {
   stroke-width: 5;
   filter: none;
   -webkit-filter: none;
+}
+
+.flow-edge.dark:not(.edge-highlight) .react-flow__edge-path {
+  stroke: gray;
 }
 
 .flow-edge circle {
@@ -67,13 +110,33 @@ html {
   fill: #006747;
 }
 
+.flow-edge.dark.edge-highlight circle {
+  /* fill: url(#edgeGradient1); */
+  fill: white;
+}
+
+.flow-edge.dark.edge-highlight.source-1 circle {
+  /* fill: url(#edgeGradient2); */
+  fill: lightgray;
+}
+
 .flow-edge.edge-highlight.source-1 .react-flow__edge-path {
   stroke: url(#edgeGradient2);
   /* stroke: #006747; */
 }
 
+.flow-edge.dark.edge-highlight.source-1 .react-flow__edge-path {
+  stroke: url(#edgeGradient4);
+  /* stroke: #006747; */
+}
+
 .flow-edge.edge-highlight:not(.source-1) .react-flow__edge-path {
   stroke: url(#edgeGradient1);
+  /* stroke: #006747; */
+}
+
+.flow-edge.dark.edge-highlight:not(.source-1) .react-flow__edge-path {
+  stroke: url(#edgeGradient3);
   /* stroke: #006747; */
 }
 
@@ -122,6 +185,10 @@ html {
   z-index: 1;
 }
 
+.App-header.dark {
+  background: linear-gradient(135deg, #212121 0%, #141414 100%);
+}
+
 .App-footer {
   display: flex;
   flex-direction: row;
@@ -130,6 +197,22 @@ html {
   background: linear-gradient(to right, #009374 0%, #006747 100%);
   margin-top: 100px;
   overflow: hidden;
+}
+
+.App-footer-alt {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background: linear-gradient(to right, #009374 0%, #006747 100%);
+  overflow: hidden;
+  color: white;
+}
+
+.App-footer-alt.dark {
+  background: linear-gradient(to right, #212121 0%, #141414 100%);
 }
 
 .Footer-box-1 {
@@ -269,6 +352,10 @@ html {
   z-index: 1;
 }
 
+.Main-menu.dark {
+  background: linear-gradient(135deg, #212121 0%, #141414 100%);
+}
+
 .Main-menu.bgshow {
   background: linear-gradient(to right, #009374 0%, #006747 100%);
 }
@@ -283,6 +370,11 @@ html {
   padding: 0 0;
   transition: none;
   transform: none;
+  color: #9ccb3b;
+}
+
+.Main-menu-button-container.dark {
+  color: #9ccb3b;
 }
 
 .Menu-button {
@@ -292,7 +384,6 @@ html {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   cursor: pointer;
   background: none;
-  color: #9ccb3b;
   transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -341,7 +432,12 @@ html {
   padding-bottom: 50px;
   flex: 1 1 auto;
   gap: 15px;
+  color: darkslategray;
   /* flex-wrap: wrap; */
+}
+
+.Home-intro.dark {
+  color: lightgray;
 }
 
 .Lab-logo {
@@ -359,7 +455,6 @@ html {
   justify-content: center;
   /* background: #61dafb; */
   height: 100%;
-  color: darkslategray;
   /* border-top: 2px solid lightgray; */
 }
 
@@ -394,6 +489,11 @@ html {
   padding-top: 30px;
 }
 
+.horizontal-numbered-list.dark li {
+  background-color: #28292a;
+  color: lightgray;
+}
+
 .horizontal-numbered-list li::before {
   content: counter(item);
   display: block;
@@ -405,12 +505,20 @@ html {
   top: 10px; */
 }
 
+/* .horizontal-numbered-list.dark li::before {
+  color: white;
+} */
+
 .Lab-title {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #006747;
   font-size: calc(35px + 2vmin);
   padding: 0 1vw;
   margin-top: 0;
+}
+
+.Lab-title.dark {
+  color: #9ccb3b;
 }
 
 .Principal-investigator {
@@ -440,6 +548,12 @@ html {
   padding: 0 2vw;
 }
 
+.Principal-investigator.dark {
+  background: #28292a;
+  background-size: 400% 400%;
+  border-radius: 10px;
+}
+
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -456,6 +570,10 @@ html {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: white;
   font-size: calc(26px + 2vmin);
+}
+
+.Pi-header.dark {
+  color: #9ccb3b;
 }
 
 .Pi-content-container {
@@ -492,7 +610,6 @@ html {
   width: 30vw;
   border-radius: 400px;
   border: 5px solid white;
-  background: linear-gradient(45deg, rgb(231, 231, 231), rgb(241, 241, 241));
 }
 
 .Pi-affiliation-container {
@@ -539,6 +656,10 @@ html {
   color: white;
   /* margin-top: -20px; */
   margin-bottom: 20px;
+}
+
+.Pi-title.dark {
+  color: lightgray;
 }
 
 .gradient-background {
@@ -695,6 +816,8 @@ html {
   pointer-events: none;
 }
 
+/*--- News Section ---*/
+
 .News-section {
   border-top: 1px solid lightgray;
   display: flex;
@@ -715,17 +838,25 @@ html {
   text-align: left;
 }
 
+.News-section-header.dark {
+  color: #9ccb3b;
+}
+
 .All-news-button {
-  /* all: unset; */
+  all: unset;
   font-size: calc(10px + 2vmin);
   color: #005432;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
   margin-bottom: 10px;
-  background-color: white;
+  /* background-color: white; */
   border: 0px;
   cursor: pointer;
+}
+
+.All-news-button.dark {
+  color: lightgray;
 }
 
 .All-news-chevron {
@@ -741,8 +872,11 @@ html {
   color: #009374;
 }
 
+.All-news-button.dark:hover {
+  color: white;
+}
+
 .All-news-button:hover .All-news-chevron {
-  color: #009374;
   transform: translateX(3px);
 }
 
@@ -758,12 +892,17 @@ html {
   overflow: hidden;
   cursor: pointer;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #005432;
+}
+
+.News-item-container.dark {
+  background-color: #28292a;
+  border-radius: 5px;
 }
 
 .News-thumbnail {
   height: 170px;
   width: 180px;
-  background: linear-gradient(45deg, rgb(231, 231, 231), rgb(241, 241, 241));
   object-fit: cover;
 }
 
@@ -790,7 +929,6 @@ html {
 .News-title h1 {
   text-align: left;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #005432;
   font-size: calc(20px + 2vmin);
   display: -webkit-box; /* enables multi-line flexbox */
   -webkit-line-clamp: 2; /* limit to 2 lines */
@@ -801,6 +939,9 @@ html {
   max-height: calc(1.2em * 2); /* 2 lines * line height */
   min-height: auto;
   margin-bottom: 10px;
+}
+.News-title.dark h1 {
+  color: white;
 }
 
 .News-date {
@@ -814,6 +955,10 @@ html {
   height: 60px;
 }
 
+.News-date.dark {
+  color: lightgray;
+}
+
 .News-highlighter1 {
   display: flex;
   width: 100%;
@@ -821,6 +966,10 @@ html {
   background-color: rgb(228, 228, 228);
   position: absolute;
   bottom: 0;
+}
+
+.News-highlighter1.dark {
+  background-color: #323232;
 }
 
 .News-highlighter2 {
@@ -831,6 +980,10 @@ html {
   position: absolute;
   bottom: 0;
   transition: width 300ms ease-in-out; /* animation */
+}
+
+.News-highlighter2.dark {
+  background: linear-gradient(to right, white 0%, lightgray 100%);
 }
 
 .News-item-arrow-container {
@@ -844,9 +997,12 @@ html {
 .News-item-arrow {
   height: 40px;
   width: 40px;
-  color: #005432;
   stroke-width: 50px;
   opacity: 0;
+}
+
+.News-item-arrow.dark {
+  color: white;
 }
 
 /* Trigger animations on hover of the whole container */
@@ -882,6 +1038,10 @@ html {
   z-index: 0;
 }
 
+.News-fp-header.dark {
+  color: #9ccb3b;
+}
+
 /*---- PUBLICATIONS PAGE ----*/
 
 .Publications {
@@ -904,6 +1064,10 @@ html {
   z-index: 0;
 }
 
+.Publications-header.dark {
+  color: #7cb900;
+}
+
 .Publication-year {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   color: #9ccb3b;
@@ -913,15 +1077,23 @@ html {
   /* background-color: blue; */
 }
 
+.Publication-year.dark {
+  color: #009374;
+}
+
 .Publication-group {
   list-style-type: square;
+  color: darkslategray;
+}
+
+.Publication-group.dark {
+  color: lightgray;
 }
 
 .Publication-group li {
   text-align: left;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: calc(10px + 2vmin);
-  color: darkslategray;
   margin-bottom: 10px;
 }
 
@@ -933,13 +1105,20 @@ html {
   align-items: flex-start;
   padding: 0 10vw;
   margin-top: -50px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   overflow: hidden;
+}
+
+.People h1 {
+  color: #005432;
+}
+
+.People.dark h1 {
+  color: #9ccb3b;
 }
 
 .People-header {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  color: #005432;
   font-size: calc(32px + 2vmin);
   border-bottom: 1px solid lightgray;
   padding-bottom: 10px;
@@ -955,10 +1134,17 @@ html {
   align-items: center;
   cursor: pointer;
   gap: 0;
-  background-color: #005432;
+  background: #005432;
   border-radius: 2px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
   transition: all 300ms ease-in-out;
+  color: white;
+}
+
+.Person-container.dark {
+  background: linear-gradient(135deg, #323232 0%, #292929 50%, #242424 100%);
+  border-radius: 5px;
+  color: lightgray;
 }
 
 .Person-container:hover {
@@ -987,7 +1173,6 @@ html {
 }
 
 .Person-photo {
-  background: linear-gradient(45deg, rgb(231, 231, 231), rgb(241, 241, 241));
   height: auto;
   width: 100%;
   aspect-ratio: 1/1;
@@ -1013,7 +1198,6 @@ html {
   font-size: calc(1.33vw);
   /* color: darkslategray; */
   font-weight: 700;
-  color: white;
   /* font-size: calc(1.7vw); */
 }
 
@@ -1085,10 +1269,10 @@ html {
   height: fit-content;
   position: sticky;
   top: 80px;
+  color: darkslategray;
 }
 
 .Profile-photo {
-  background: linear-gradient(45deg, rgb(231, 231, 231), rgb(241, 241, 241));
   height: 23vmax;
   width: 23vmax;
   border-radius: 50%;
@@ -1101,6 +1285,11 @@ html {
   color: #005432;
   font-size: calc(22px + 2vmin);
   margin-bottom: 0px;
+  max-width: 25vmax;
+}
+
+.Profile-name.dark {
+  color: #7cb900;
 }
 
 .Profile-content {
@@ -1111,6 +1300,10 @@ html {
   align-items: flex-start;
   padding-left: 7vw;
   gap: 0;
+}
+
+.Profile-content.dark {
+  color: lightgray;
 }
 
 .Profile-header {
@@ -1128,7 +1321,6 @@ html {
   text-align: left;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: calc(10px + 2vmin);
-  color: darkslategray;
   margin-bottom: 10px;
   list-style-type: square;
   margin-top: -20px;
@@ -1138,7 +1330,6 @@ html {
   text-align: left;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: calc(10px + 2vmin);
-  color: darkslategray;
   margin-bottom: 10px;
 }
 
@@ -1152,22 +1343,32 @@ html {
   margin-top: 10px;
 }
 
+.Profile-links-container a {
+  color: darkslategrey;
+}
+
+.Profile-links-container.dark a {
+  color: #009374;
+}
+
+.Profile-links-container.dark a:hover {
+  color: lightgray;
+}
+
 .Profile-links {
-  height: 40px;
-  width: 40px;
-  color: darkslategray;
+  height: 30px;
+  width: 30px;
+  color: inherit;
 }
 
 #Linkedin-icon {
-  height: 32px;
-  width: 32px;
-  color: darkslategray;
+  height: 30px;
+  width: 30px;
 }
 
 #Gscholar-icon {
-  height: 32px;
-  width: 32px;
-  color: darkslategray;
+  height: 30px;
+  width: 30px;
 }
 
 #Linkedin-icon:hover {
@@ -1218,7 +1419,7 @@ html {
   align-items: center;
   margin-top: -50px;
   overflow: hidden;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .Research-header {
@@ -1232,6 +1433,10 @@ html {
   position: relative;
   z-index: 0;
   display: none;
+}
+
+.Research-header {
+  color: #9ccb3b;
 }
 
 .React-flow-container {
@@ -1295,7 +1500,7 @@ html {
 .Research-card .back {
   position: absolute;
   backface-visibility: hidden;
-  background-image: linear-gradient(135deg, #009374 0%, #006747 100%);
+  background: linear-gradient(135deg, #009374 0%, #006747 100%);
   height: 100%;
   width: 100%;
   border-radius: 1em;
@@ -1305,6 +1510,11 @@ html {
   transform-style: preserve-3d;
   color: #fff;
   box-shadow: 2px 4px 8px 1px rgba(0, 0, 0, 0.4);
+}
+
+.Research-card.dark .front,
+.Research-card.dark .back {
+  background: linear-gradient(135deg, #323232 0%, #212121 100%);
 }
 
 .Research-card .front {
@@ -1511,7 +1721,7 @@ html {
   align-items: center;
   margin-top: -50px;
   overflow: hidden;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .Research-area-header {
@@ -1524,6 +1734,10 @@ html {
   text-align: center;
   position: relative;
   z-index: 0;
+}
+
+.Research-area-header.dark {
+  color: #9ccb3b;
 }
 
 .Research-area-icon {
@@ -1546,6 +1760,10 @@ html {
   /* background: #61dafb; */
   width: 65vw;
   color: darkslategray;
+}
+
+.Research-topic-desc.dark {
+  color: lightgray;
 }
 
 .Research-topic-grid {
@@ -1591,6 +1809,11 @@ html {
   position: relative;
 }
 
+.Research-topic-tab.dark {
+  background-color: #28292a;
+  color: lightgray;
+}
+
 .Research-topic-tab:hover {
   transform: scale(1.03) translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1607,6 +1830,10 @@ html {
   color: #005432;
   font-size: 25px;
   text-align: left;
+}
+
+.Research-topic-title.dark {
+  color: #9ccb3b;
 }
 
 .Research-topic-brief {
@@ -1674,7 +1901,7 @@ html {
   overflow: hidden;
   /* padding-top: 100px; */
   margin-top: -50px;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .Collaborators-header {
@@ -1688,6 +1915,10 @@ html {
   margin-bottom: 50px;
   position: relative;
   z-index: 0;
+}
+
+.Collaborators-header.dark {
+  color: #9ccb3b;
 }
 
 .Collaborators-container {
@@ -1711,7 +1942,8 @@ html {
 }
 
 #USF-health-logo {
-  height: 80px;
+  height: 150px;
+  margin-top: -30px;
 }
 
 #USF-health-voice-logo {
@@ -1767,14 +1999,22 @@ html {
   z-index: 0;
 }
 
+.Contact-header.dark {
+  color: #9ccb3b;
+}
+
 .Contact-form {
   display: flex;
   flex: 1;
   margin: 80px auto;
-  background: #fff;
+  /* background: #fff; */
   padding: 40px;
   /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); */
   font-family: "Inter", sans-serif;
+}
+
+.Contact-form.dark {
+  color: lightgray;
 }
 
 .Contact-form form ul {
@@ -2077,6 +2317,10 @@ html {
     transition: height 0.3s ease-in-out;
   }
 
+  .Main-menu.dark {
+    background: linear-gradient(135deg, #212121 0%, #141414 100%);
+  }
+
   .Main-menu-button-container {
     display: flex;
     flex-direction: column;
@@ -2095,6 +2339,10 @@ html {
     right: 0%;
     gap: 10px;
     overscroll-behavior: contain;
+  }
+
+  .Main-menu-button-container.dark {
+    background: linear-gradient(to right, #212121 0%, #141414 100%);
   }
 
   /* When toggle is open */
@@ -2343,6 +2591,10 @@ html {
     /* background-color: red; */
   }
 
+  .Profile-name {
+    max-width: 100vw;
+  }
+
   .Profile-text {
     text-align: center;
   }
@@ -2417,6 +2669,10 @@ html {
 
   .App-logo {
     height: 10vmin;
+  }
+
+  .Main-body {
+    margin-top: 90px;
   }
 
   .News-item-container {
@@ -2538,4 +2794,62 @@ html {
   .Research-topic-desc {
     width: 100%;
   }
+}
+
+.dark-mode-toggle {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 110%;
+  right: 2%;
+  z-index: 3;
+}
+
+.dark-mode-toggle__icon {
+  width: 40px;
+  height: auto;
+  color: #f2c94c;
+  transition: all 0.2s linear;
+  background-color: #009374;
+  border-radius: 200px;
+  padding: 10px;
+}
+
+.dark-mode-toggle__icon:hover {
+  color: #f6c11f;
+}
+
+.dark-mode-toggle__icon--moon {
+  color: #009374;
+  opacity: 1;
+  transition: all 0.2s linear, color 0.2s linear;
+  transform: scale(1);
+  background-color: #323232;
+  border-radius: 200px;
+}
+
+.dark-mode-toggle__icon--moon:hover {
+  color: #009374;
+  opacity: 1;
+}
+
+.dark-mode-toggle__rays {
+  transition: opacity 0.2s linear 0.2s;
+}
+
+.dark-mode-toggle__icon--moon .dark-mode-toggle__rays {
+  transition: opacity 0.2s linear;
+  opacity: 0;
+}
+
+.dark-mode-toggle__cut-out {
+  transition: transform 0.5s cubic-bezier(0.54, -0.42, 0.29, 1.3);
+}
+
+.dark-mode-toggle__icon--moon .dark-mode-toggle__cut-out {
+  transform: translateX(-35%);
+  transition: transform 0.5s cubic-bezier(0.21, 0.17, 0.43, 1.43);
 }

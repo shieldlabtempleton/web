@@ -1,6 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 const BackgroundEffects = () => {
+  const { theme } = useContext(ThemeContext);
   useEffect(() => {
     const particlesContainer = document.getElementById("particles-container");
     if (!particlesContainer) return;
@@ -128,8 +130,8 @@ const BackgroundEffects = () => {
   return (
     <div class="gradient-background">
       <div class="glow"></div>
-      <div class="grid-overlay"></div>
-      <div class="noise-overlay"></div>
+      {theme === "light" ? <div class="grid-overlay"></div> : null}
+      {theme === "light" ? <div class="noise-overlay"></div> : null}
       <div class="particles-container" id="particles-container"></div>
     </div>
   );

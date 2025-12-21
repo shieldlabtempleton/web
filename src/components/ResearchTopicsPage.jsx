@@ -1,15 +1,15 @@
 import React, { useEffect, useContext } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Placeholder from "./Placeholder";
-import { ResearchContext, ResearchProvider } from "../context/ResearchContext";
 import { researchtopics } from "../webdata/ResearchTopics";
 import { ScrollToSectiion } from "./ScrollButtons";
+import { ThemeContext } from "../context/ThemeContext";
 
 const ResearchTopicsPage = ({ title, icon }) => {
-  const location = useLocation();
+  const { theme } = useContext(ThemeContext);
   // const research = location.state;
   const { slug } = useParams();
-  const { research_directory } = useContext(ResearchContext) || {};
+
   const RESEARCH_MAP = {
     "ai-ml": researchtopics["aiml"],
     biomechanics: researchtopics["biomechanics"],
@@ -35,7 +35,9 @@ const ResearchTopicsPage = ({ title, icon }) => {
       );
     }, []);
     return (
-      <button className="Research-topic-tab">
+      <button
+        className={`Research-topic-tab ${theme === "light" ? "" : "dark"}`}
+      >
         <div style={{ height: "290px", width: "100%" }}>
           <img src={thumbnail} className="Research-topic-thumbnail" alt="" />
         </div>
@@ -45,7 +47,13 @@ const ResearchTopicsPage = ({ title, icon }) => {
             gap: "0",
           }}
         >
-          <h1 className="Research-topic-title">{title}</h1>
+          <h1
+            className={`Research-topic-title ${
+              theme === "light" ? "" : "dark"
+            }`}
+          >
+            {title}
+          </h1>
           <p className="Research-topic-brief">{description}</p>
           <div
             style={{
@@ -97,8 +105,20 @@ const ResearchTopicsPage = ({ title, icon }) => {
               flexDirection: "column",
             }}
           >
-            <h1 className="Research-area-header">{research.label}</h1>
-            <span className="Research-topic-desc">{research.description}</span>
+            <h1
+              className={`Research-area-header ${
+                theme === "light" ? "" : "dark"
+              }`}
+            >
+              {research.label}
+            </h1>
+            <span
+              className={`Research-topic-desc ${
+                theme === "light" ? "" : "dark"
+              }`}
+            >
+              {research.description}
+            </span>
           </div>
           <section id="research-topics" style={{ width: "100%" }}>
             <div
