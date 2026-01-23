@@ -4,6 +4,7 @@ html {
 
 html.light {
   --bg: linear-gradient(to right, #009374 0%, #006747 100%);
+  --bg-fb: white;
 }
 
 html.light:before {
@@ -17,6 +18,7 @@ html.light:before {
 
 html.dark {
   --bg: linear-gradient(to right, #212121 0%, #141414 100%);
+  --bg-fb: #212121;
 }
 
 html.dark:before {
@@ -31,6 +33,7 @@ html.dark:before {
 body {
   background: var(--bg);
   background-attachment: fixed;
+  background-color: var(--bg-fb);
 }
 
 .App {
@@ -437,7 +440,7 @@ body {
 }
 
 .Home-intro.dark {
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .Lab-logo {
@@ -491,7 +494,7 @@ body {
 
 .horizontal-numbered-list.dark li {
   background-color: #28292a;
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .horizontal-numbered-list li::before {
@@ -1087,7 +1090,7 @@ body {
 }
 
 .Publication-group.dark {
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .Publication-group li {
@@ -1144,7 +1147,7 @@ body {
 .Person-container.dark {
   background: linear-gradient(135deg, #323232 0%, #292929 50%, #242424 100%);
   border-radius: 5px;
-  color: lightgray;
+  color: white;
 }
 
 .Person-container:hover {
@@ -1303,7 +1306,7 @@ body {
 }
 
 .Profile-content.dark {
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .Profile-header {
@@ -1409,6 +1412,10 @@ body {
   width: 50%;
 }
 
+.Placeholder-text.dark {
+  color: white;
+}
+
 /*---- Research Page ----*/
 .Research {
   display: flex;
@@ -1435,7 +1442,7 @@ body {
   display: none;
 }
 
-.Research-header {
+.Research-header.dark {
   color: #9ccb3b;
 }
 
@@ -1763,7 +1770,7 @@ body {
 }
 
 .Research-topic-desc.dark {
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .Research-topic-grid {
@@ -1811,7 +1818,7 @@ body {
 
 .Research-topic-tab.dark {
   background-color: #28292a;
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .Research-topic-tab:hover {
@@ -2014,7 +2021,7 @@ body {
 }
 
 .Contact-form.dark {
-  color: lightgray;
+  color: whitesmoke;
 }
 
 .Contact-form form ul {
@@ -2367,7 +2374,7 @@ body {
 
   #Mobile-menu {
     position: absolute;
-    right: 5%;
+    right: 2%;
     z-index: 3;
   }
 
@@ -2813,7 +2820,7 @@ body {
   height: auto;
   color: #f2c94c;
   transition: all 0.2s linear;
-  background-color: #009374;
+  background-color: rgba(0, 148, 116, 0.9);
   border-radius: 200px;
   padding: 10px;
 }
@@ -2827,7 +2834,7 @@ body {
   opacity: 1;
   transition: all 0.2s linear, color 0.2s linear;
   transform: scale(1);
-  background-color: #323232;
+  background-color: rgba(50, 50, 50, 0.9);
   border-radius: 200px;
 }
 

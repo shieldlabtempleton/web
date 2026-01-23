@@ -341,31 +341,31 @@ export const gradstudents = [
       "Information Technology Intern, Raymond James, May 2024 - August 2024",
     ],
   },
-  {
-    title: "",
-    firstname: "Jay",
-    middleinitial: null,
-    lastname: "Jariwala",
-    suffix: " MSc Student",
-    photo: jay,
-    email: "jayjariwala017@gmail.com",
-    linkedin: "https://www.linkedin.com/in/jariwala-jay/",
-    role: "msc-student",
-    researchfocus:
-      "My research focuses on the design and development of intelligent digital health systems that leverage AI and software engineering to promote health equity and personalized care. I explore the intersection of smart health applications, user-centered design, and data-driven personalization to support individuals with chronic conditions and food insecurity. My work integrates mobile health (mHealth) technologies, backend infrastructure, and nutrition analytics to develop scalable, patient-centered interventions for improving health outcomes.",
-    education: [
-      "M.S. student in Computer Science, University of South Florida, Expected Dec 2025",
-      "B.E. Information Technology, Gujarat Technological University, May 2024",
-    ],
-    publications: [
-      "**Jay Hiteshkumar Jariwala**, Anika Anjum, Tanvik Reddy Kotha, Hannah M Thomas, Jennifer Bleck, Rita DeBate, and John Michael Templeton, “MyFoodRx: Design of a Personalized Food‑as‑Medicine Application to Promote Food Security and Chronic Disease Management”, IEEE SmartComp 2025 ‑ 2nd International Workshop on Digital and Mobile Smart Health Systems (DM‑SmartHealth ‘25) - Cork, Ireland - June 2025.",
-    ],
-    employment: [
-      "Graduate Research Assistant – University of South Florida, Feb 2025 – Present",
-      "Frontend Software Engineer Intern – Dapper Labs, May 2025 – Aug 2025",
-      "Software Engineering Intern – Monkeybox , May 2024 – Jul 2024",
-    ],
-  },
+  // {
+  //   title: "",
+  //   firstname: "Jay",
+  //   middleinitial: null,
+  //   lastname: "Jariwala",
+  //   suffix: " MSc Student",
+  //   photo: jay,
+  //   email: "jayjariwala017@gmail.com",
+  //   linkedin: "https://www.linkedin.com/in/jariwala-jay/",
+  //   role: "msc-student",
+  //   researchfocus:
+  //     "My research focuses on the design and development of intelligent digital health systems that leverage AI and software engineering to promote health equity and personalized care. I explore the intersection of smart health applications, user-centered design, and data-driven personalization to support individuals with chronic conditions and food insecurity. My work integrates mobile health (mHealth) technologies, backend infrastructure, and nutrition analytics to develop scalable, patient-centered interventions for improving health outcomes.",
+  //   education: [
+  //     "M.S. student in Computer Science, University of South Florida, Expected Dec 2025",
+  //     "B.E. Information Technology, Gujarat Technological University, May 2024",
+  //   ],
+  //   publications: [
+  //     "**Jay Hiteshkumar Jariwala**, Anika Anjum, Tanvik Reddy Kotha, Hannah M Thomas, Jennifer Bleck, Rita DeBate, and John Michael Templeton, “MyFoodRx: Design of a Personalized Food‑as‑Medicine Application to Promote Food Security and Chronic Disease Management”, IEEE SmartComp 2025 ‑ 2nd International Workshop on Digital and Mobile Smart Health Systems (DM‑SmartHealth ‘25) - Cork, Ireland - June 2025.",
+  //   ],
+  //   employment: [
+  //     "Graduate Research Assistant – University of South Florida, Feb 2025 – Present",
+  //     "Frontend Software Engineer Intern – Dapper Labs, May 2025 – Aug 2025",
+  //     "Software Engineering Intern – Monkeybox , May 2024 – Jul 2024",
+  //   ],
+  // },
   {
     title: "",
     firstname: "Tarun",
@@ -455,6 +455,14 @@ export const alumni = [
     suffix: " MSc '25",
     role: "alumni",
     linkedin: "https://taofeeeek.github.io/tb/",
+  },
+  {
+    firstname: "Jay",
+    photo: jay,
+    lastname: "Jariwala,",
+    suffix: " MSc '25",
+    role: "alumni",
+    linkedin: "https://www.linkedin.com/in/jariwala-jay/",
   },
   {
     firstname: "Varun",
