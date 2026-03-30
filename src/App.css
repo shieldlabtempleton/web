@@ -94,7 +94,9 @@ body {
 }
 
 .flow-edge circle {
-  transition: transform 300ms ease-in-out, fill 300ms ease-in-out;
+  transition:
+    transform 300ms ease-in-out,
+    fill 300ms ease-in-out;
   r: 6px;
 }
 
@@ -387,21 +389,26 @@ body {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   cursor: pointer;
   background: none;
-  transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+  transition:
+    letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1),
     transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .Menu-button:hover {
   color: #ffffff;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-    0 0 20px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.4);
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 50px rgba(255, 255, 255, 0.4);
 }
 
 .Menu-button.active {
   color: white;
-  text-shadow: 0 0 1.25px rgba(255, 255, 255, 0.9),
-    0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 203, 255, 0.4);
+  text-shadow:
+    0 0 1.25px rgba(255, 255, 255, 0.9),
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 15px rgba(255, 203, 255, 0.4);
   transform: scale(1.3);
 }
 
@@ -768,11 +775,8 @@ body {
   width: 100%;
   height: 100%;
   background-size: 40px 40px;
-  background-image: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0.05) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   z-index: 2;
 }
@@ -894,7 +898,9 @@ body {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.1);
   color: #005432;
 }
 
@@ -1011,7 +1017,9 @@ body {
 /* Trigger animations on hover of the whole container */
 .News-item-container:hover {
   transform: scale(1.01);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.19), 0 8px 6px rgba(0, 0, 0, 0.23);
+  box-shadow:
+    0 12px 20px rgba(0, 0, 0, 0.19),
+    0 8px 6px rgba(0, 0, 0, 0.23);
 }
 .News-item-container:hover .News-highlighter2 {
   width: 100%;
@@ -1139,7 +1147,9 @@ body {
   gap: 0;
   background: #005432;
   border-radius: 2px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
   transition: all 300ms ease-in-out;
   color: white;
 }
@@ -1152,7 +1162,9 @@ body {
 
 .Person-container:hover {
   transform: scale(1.02) translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #pi-photo {
@@ -1280,7 +1292,9 @@ body {
   width: 23vmax;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .Profile-name {
@@ -1812,7 +1826,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 2px 4px rgba(0, 0, 0, 0.06);
   position: relative;
 }
 
@@ -1823,7 +1839,9 @@ body {
 
 .Research-topic-tab:hover {
   transform: scale(1.03) translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 8px 16px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .Research-topic-thumbnail {
@@ -2083,7 +2101,9 @@ body {
   cursor: pointer;
   font-weight: 600;
   font-size: 24px;
-  transition: all 0.3s ease, transform 0.2s ease;
+  transition:
+    all 0.3s ease,
+    transform 0.2s ease;
   width: 250px;
 }
 
@@ -2168,8 +2188,8 @@ body {
     flex-direction: row;
     text-align: left;
     /* position: relative; */
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     font-size: calc(10px + 1.5vmin);
     color: #ffffff;
     background-color: #006747;
@@ -2367,7 +2387,8 @@ body {
     cursor: pointer;
     background: none;
     color: #9ccb3b;
-    transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+    transition:
+      letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1),
       transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     padding: 20px 0;
   }
@@ -2441,7 +2462,9 @@ body {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.15),
+      0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .News-thumbnail {
@@ -2499,8 +2522,8 @@ body {
     all: unset;
     text-align: left;
     border-top: 1px solid lightgray;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     color: darkslategray;
     /* margin-top: 10px; */
     /* background-color: green; */
@@ -2693,7 +2716,9 @@ body {
     position: relative;
     /* overflow: hidden; */
     cursor: pointer;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15), 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:
+      0 8px 16px rgba(0, 0, 0, 0.15),
+      0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .News-thumbnail {
@@ -2752,8 +2777,8 @@ body {
     flex-direction: row;
     text-align: left;
     border-top: 1px solid lightgray;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     color: darkslategray;
     margin-top: 2px;
     font-size: 10px;
@@ -2810,9 +2835,10 @@ body {
   margin: 0;
   cursor: pointer;
   position: absolute;
-  top: 110%;
-  right: 2%;
+  top: 0%;
+  left: 0;
   z-index: 3;
+  transform: scale(0.7);
 }
 
 .dark-mode-toggle__icon {
@@ -2820,7 +2846,8 @@ body {
   height: auto;
   color: #f2c94c;
   transition: all 0.2s linear;
-  background-color: rgba(0, 148, 116, 0.9);
+  /* background-color: rgba(0, 148, 116, 0.9); */
+  background-color: rgba(0, 103, 70, 0.9);
   border-radius: 200px;
   padding: 10px;
 }
@@ -2832,7 +2859,9 @@ body {
 .dark-mode-toggle__icon--moon {
   color: #009374;
   opacity: 1;
-  transition: all 0.2s linear, color 0.2s linear;
+  transition:
+    all 0.2s linear,
+    color 0.2s linear;
   transform: scale(1);
   background-color: rgba(50, 50, 50, 0.9);
   border-radius: 200px;

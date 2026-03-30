@@ -22,6 +22,7 @@ const ResearchTopicsPage = ({ title, icon }) => {
     neurology: researchtopics["neurology"],
     nlp: researchtopics["nlp"],
     software: researchtopics["software"],
+    "public-health": researchtopics["publichealth"],
   };
 
   const research = RESEARCH_MAP[slug];
@@ -31,7 +32,7 @@ const ResearchTopicsPage = ({ title, icon }) => {
       const deviceWidth = window.screen.width;
       document.documentElement.style.setProperty(
         "--initial-vw",
-        `${deviceWidth}px`
+        `${deviceWidth}px`,
       );
     }, []);
     return (
@@ -126,8 +127,8 @@ const ResearchTopicsPage = ({ title, icon }) => {
                 research.researchdata.length === 1
                   ? "Research-topic-grid a"
                   : research.researchdata.length < 6
-                  ? "Research-topic-grid b"
-                  : "Research-topic-grid"
+                    ? "Research-topic-grid b"
+                    : "Research-topic-grid"
               }
             >
               {research.researchdata.map((item, index) => (

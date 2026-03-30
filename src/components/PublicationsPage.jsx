@@ -42,6 +42,26 @@ const PublicationsPage = () => {
       </h2>
       <ul className={`Publication-group ${theme === "light" ? "" : "dark"}`}>
         <li>
+          Katherine F. Walters, John Michael Templeton, Harry Van Loveren,
+          Fayyadh R. Yusuf, Nathan D. Schilaty,{" "}
+          <strong>
+            “EEG as a Diagnostic Tool and Therapeutic Monitor in Traumatic Brain
+            Injury: A Sub‑study Methodology from the Hyperbaric Oxygen Treatment
+            for Veterans with Traumatic Brain Injury Randomized Controlled
+            Trial”
+          </strong>
+          , Trials, 2026. (CiteScore: 3.4)
+        </li>
+        <li>
+          Rita DeBate, John Michael Templeton, Jay Hiteshkumar Jariwala,
+          Jennifer Bleck,{" "}
+          <strong>
+            “MyFoodRx: Formative research for the development of an AI‑based
+            personalized food‑as‑medicine smartphone application”
+          </strong>
+          , American Journal of Lifestyle Medicine, 2026 (CiteScore: 4.4)
+        </li>
+        <li>
           Md Mezbahul Islam, John Michael Templeton, Masrur Sobhan, Christian
           Poellabauer, and Ananda Mondal,{" "}
           <strong>

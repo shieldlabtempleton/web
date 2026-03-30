@@ -1,5 +1,8 @@
 import biomechanicsthumbnail1 from "../assets/gg.png";
 import biomechanicsthumbnail2 from "../assets/mg.jpeg";
+import publichealththumbnail1 from "../assets/foodrx.png";
+import nlpthumbnail1 from "../assets/ccancer.jpg";
+import aimlthumbnail1 from "../assets/aai.avif";
 
 export const biomechanics = [
   {
@@ -92,6 +95,15 @@ export const researchtopics = {
     description:
       "Enabling disease surveillance, predictive modeling, and digital literacy tools can help agencies improve community outreach and data-driven decision-making.",
     showTarget: true,
+    researchdata: [
+      {
+        thumbnail: publichealththumbnail1,
+        title: "MyFoodRX",
+        description:
+          "An internally developed digital health technology system to serve as a clinical trial tool focused on food security, chronic disease management, and digitally guided nutrition interventions.",
+        keywords: ["Software", "Public Health", "HCI", "Commercial Devices"],
+      },
+    ],
   },
 
   aiml: {
@@ -102,6 +114,15 @@ export const researchtopics = {
     sourceLocation: "right",
     description:
       "AI/ML enable early disease detection, precision diagnostics, and personalized treatment by uncovering complex patterns in multimodal clinical data.",
+    researchdata: [
+      {
+        thumbnail: aimlthumbnail1,
+        title: "Lung Cancer Risk Prediction",
+        description:
+          "Design of temporally-aware models of low dose computed tomography (LDCT) images to improve lung cancer future risk prediction. The formation of these models highlight the benefits of incorporating temporal changes in order to provide both earlier and more precise risk stratification and for enhancing clinical utility.",
+        keywords: ["AI/ML", "Computer Vision", "Cancer"],
+      },
+    ],
   },
 
   commercialdevices: {
@@ -148,6 +169,15 @@ export const researchtopics = {
     description:
       "NLP is useful in extracting clinically meaningful insights from unstructured data such as physician notes, patient portals, and electronic health records.",
     showSource: true,
+    researchdata: [
+      {
+        thumbnail: nlpthumbnail1,
+        title: "Cancer Restaging & Treatment Recommendation",
+        description:
+          "Development of a neuro-symbolic pipeline that extracts information from unstructured uterine cancer pathology reports for restaging cases under updated NCCN guidelines for generating clinical treatment recommendations. Evaluated on TCGA data, we demonstrates high concordance and supports transparent, trustworthy clinical decision-making.",
+        keywords: ["AI/ML", "NLP", "Cancer"],
+      },
+    ],
   },
 
   software: {
