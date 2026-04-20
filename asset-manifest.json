@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/web/static/css/main.64f97ba7.css",
-    "main.js": "/web/static/js/main.8a1dcdcd.js",
+    "main.js": "/web/static/js/main.f41b1674.js",
     "static/js/453.4a359a8a.chunk.js": "/web/static/js/453.4a359a8a.chunk.js",
     "static/media/Templeton.png": "/web/static/media/Templeton.9fbfbdaf54972c53e8de.png",
     "static/media/jm-templeton-banner-01.jpg": "/web/static/media/jm-templeton-banner-01.6198453e0756ba20bc9c.jpg",
@@ -11,6 +11,7 @@
     "static/media/Photo_of_Anika_Anjum.jpg": "/web/static/media/Photo_of_Anika_Anjum.969fac2010a07abfea28.jpg",
     "static/media/102925-jm-rushitha-banner-01.jpg": "/web/static/media/102925-jm-rushitha-banner-01.249b7da574d03d5461a5.jpg",
     "static/media/mohamad-ebraheem-2.jpg": "/web/static/media/mohamad-ebraheem-2.1df3aed2086ddd2c8abd.jpg",
+    "static/media/voiceandhearing.png": "/web/static/media/voiceandhearing.2d52e043448836a2a405.png",
     "static/media/foodrx.png": "/web/static/media/foodrx.d242fe1b76297a0fd3c8.png",
     "static/media/kayla.jpg": "/web/static/media/kayla.de4cbaa6ca1a1d7e5270.jpg",
     "static/media/rushitha.jpg": "/web/static/media/rushitha.573c40ee82e16f5abcce.jpg",
@@ -56,11 +57,11 @@
     "static/media/mobile.svg": "/web/static/media/mobile.187addb8daf674ec4264d1a6b01eaf66.svg",
     "index.html": "/web/index.html",
     "main.64f97ba7.css.map": "/web/static/css/main.64f97ba7.css.map",
-    "main.8a1dcdcd.js.map": "/web/static/js/main.8a1dcdcd.js.map",
+    "main.f41b1674.js.map": "/web/static/js/main.f41b1674.js.map",
     "453.4a359a8a.chunk.js.map": "/web/static/js/453.4a359a8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.64f97ba7.css",
-    "static/js/main.8a1dcdcd.js"
+    "static/js/main.f41b1674.js"
   ]
 }
