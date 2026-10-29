@@ -29,12 +29,13 @@ const PersonProfile = () => {
     "mohamed-ebraheem": grad[4],
     "parsa-khorrami": grad[5],
     "rushitha-mamidala": grad[6],
-    "srikanth-akkaru": grad[7],
-    "kayla-homatas": grad[8],
-    "jay-jariwala": grad[9],
-    "tarun-mannava": grad[10],
-    "kundan-sakkuru": grad[11],
-    "megan-tran": grad[12],
+    "nithin-palyam": grad[7],
+    "srikanth-akkaru": grad[8],
+    "kayla-homatas": grad[9],
+    "jay-jariwala": grad[10],
+    "tarun-mannava": grad[11],
+    "kundan-sakkuru": grad[12],
+    "megan-tran": grad[13],
   };
 
   const person = PEOPLE_MAP[slug];

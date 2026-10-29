@@ -38,9 +38,105 @@ const PublicationsPage = () => {
         </a>
       </div>
       <h2 className={`Publication-year ${theme === "light" ? "" : "dark"}`}>
-        2025
+        2026
       </h2>
       <ul className={`Publication-group ${theme === "light" ? "" : "dark"}`}>
+        <li>
+          Megan Tran, Jessica Holler, Byron Moran, Nathan D. Schilaty, and John
+          Michael Temple- ton,{" "}
+          <strong>
+            “Predicting Time to Clearance of Sport-Related Concussions Using
+            Machine Learning”
+          </strong>
+          , Digital Health, 2026. (Impact Factor: 3.7)
+        </li>
+        <li>
+          Md Mezbahul Islam, John Michael Templeton, Christian Poellabauer, and
+          Ananda Mo- han Mondal{" "}
+          <strong>
+            “SCOPE-PD: Explainable AI on Subjective and Clinical Objective
+            Measurements of Parkinson’s Disease for Precision Decision-Making”
+          </strong>
+          , 18th ISCA International Conference on Bioinformatics and
+          Computational Biology (ISCA BICOB’26).
+        </li>
+        <li>
+          Jiayi Wang, Guanqing Guo, Ashley Tabachnick, Jianing Su, Hongdao Meng,
+          Shaun Canavan, John Michael Templeton, Dmitry Goldgof, and Yu Sun{" "}
+          <strong>
+            “A Multimodal Dataset for Music-Induced Emotion and Micro-Behavior
+            Analysis in Older Adults”
+          </strong>
+          , IEEE Transactions on Affective Computing (Impact Factor: 11.3).
+        </li>
+        <li>
+          Adrian Kohut, Matthew L. Anderson, Maya Yasukawa, Lindsey Nguy,
+          Chrissy Liu, Lilla Markel, Varsha Godakhindi, John M. Templeton, Ankur
+          A. Mali, Timothy M. Nywening, Richard A. Jacobson, Andreas
+          Karachristos, Thomas J. Rutherford, and Vaagn Andikyan
+          <strong>
+            “Hyperthermic Intraperitoneal Chemotherapy is Associated with
+            Improved Over- all Survival in Advanced Non–High-Grade Epithelial
+            Ovarian, Fallopian Tube, and Primary Peritoneal Carcinoma”
+          </strong>
+          , International Journal of Gynecological Cancer (Impact Factor: 5.4).
+        </li>
+
+        <li>
+          Asim Waqas, Aakash Tripathi, Siddharth Sivaram, Farzana Ali, Shiba
+          Kuanar, Yashbir Singh, Hanieh Ajami, Orhan Unal, Yuankai Huo,
+          Abdussalam Elhanashi, Qiangqiang Gu, Khaled Younis, Cody H. Savage,
+          Iryna Hartsock, Nikolas Koutsoubis, Samir Alejandro Nacer, John
+          Michael Templeton, Matthew B. Schabath and Ghulam Rasool,{" "}
+          <strong>
+            “Foundation Mod- els and Multimodal Learning for Medical Data with
+            Application in Oncology, Journal of Imaging Informatics in Medicine”
+          </strong>{" "}
+          (Impact Factor: 3.1).
+        </li>
+
+        <li>
+          Mohamed Ebraheem, Jamie Torghranegar, Bridge2AI‑Voice Consortium, Yael
+          Bensoussan*, and John Michael Templeton*,{" "}
+          <strong>
+            “Explainable and Interpretable AI for Voice and Speech Analysis in
+            Clinical Care: A Systematic Review”
+          </strong>
+          , Journal of Medical Internet Research. (Impact Factor: 6.0)
+        </li>
+
+        <li>
+          Parsa Khorrami, Taofeek Braimoh, Dayane Alfenas Reis, Nathaniel A.
+          Bates, Nathan D. Schilaty, and John Michael Templeton{" "}
+          <strong>
+            “Utilization of Machine Learning to Identify Lower Extremity
+            Biomechanical Predictors of Rupture in a Validated Cadaveric Model
+            of ACL Injury”
+          </strong>
+          , Scientific Reports. (Impact Factor: 3.9)
+        </li>
+
+        <li>
+          Md Mezbahul Islam, John Michael Templeton, Christian Poellabauer,
+          Ananda Mohan Mondal,{" "}
+          <strong>
+            “STEP‑PD: Stage‑Aware and Explainable Parkinson’s Disease Severity
+            Classification from Longitudinal Multimodal Clinical Assessments”
+          </strong>{" "}
+          The 14th IEEE International Conference on Healthcare Informatics (IEEE
+          ICHI ’26).
+        </li>
+
+        <li>
+          Megan Tran, Jessica Holler, Byron Moran, Nathan D. Schilaty, and John
+          Michael Templeton,{" "}
+          <strong>
+            “Predicting Time to Clearance of Sport‑Related Concussions Using
+            Machine Learning”
+          </strong>
+          , Digital Health. (Impact Factor: 3.7)
+        </li>
+
         <li>
           Katherine F. Walters, John Michael Templeton, Harry Van Loveren,
           Fayyadh R. Yusuf, Nathan D. Schilaty,{" "}
@@ -52,6 +148,7 @@ const PublicationsPage = () => {
           </strong>
           , Trials, 2026. (CiteScore: 3.4)
         </li>
+
         <li>
           Rita DeBate, John Michael Templeton, Jay Hiteshkumar Jariwala,
           Jennifer Bleck,{" "}
@@ -61,6 +158,11 @@ const PublicationsPage = () => {
           </strong>
           , American Journal of Lifestyle Medicine, 2026 (CiteScore: 4.4)
         </li>
+      </ul>
+      <h2 className={`Publication-year ${theme === "light" ? "" : "dark"}`}>
+        2025
+      </h2>
+      <ul className={`Publication-group ${theme === "light" ? "" : "dark"}`}>
         <li>
           Md Mezbahul Islam, John Michael Templeton, Masrur Sobhan, Christian
           Poellabauer, and Ananda Mondal,{" "}

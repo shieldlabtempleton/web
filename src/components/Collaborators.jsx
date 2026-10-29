@@ -7,6 +7,7 @@ import logo4 from "../assets/moffitt_2c_rgb_logo.png";
 import logo5 from "../assets/usf-health-logo3.png";
 import logo6 from "../assets/usf_health_voice.png";
 import logo7 from "../assets/b2ai_voice-2.png";
+import logo8 from "../assets/voiceandhearing.png";
 import WOW from "wowjs";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -45,7 +46,7 @@ const Collaborators = () => {
           className="Collaborator-logo"
           id="Moffitt-logo"
         />
-        {/* <img src={logo7} alt="" className="Collaborator-logo" /> */}
+        <img src={logo8} alt="" className="Collaborator-logo" />
       </div>
     </div>
   );

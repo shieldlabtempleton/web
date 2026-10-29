@@ -295,6 +295,33 @@ export const gradstudents = [
   },
   {
     title: "",
+    firstname: "Nithin",
+    middleinitial: null,
+    lastname: "Palyam",
+    suffix: "PhD Student",
+    photo: null,
+    email: "nithinpalyam2311@gmail.com",
+    linkedin: "https://www.linkedin.com/in/nithin-palyam-1125871b9/",
+    researchfocus:
+      "My research sits at the intersection of Trustworthy AI and Human-Centered Computing, with a focus on making large-scale AI both interpretable and safe enough for high-stakes deployment in healthcare and education. My current work spans the scalability of machine unlearning in causal language models (UnTrac extensions to LLaMA-7B with LoRA, and GRPO-based unlearning), algorithmic fairness in resume-classification systems, and neuro-symbolic AI applied to clinical decision support through the Automated NCCN-Guideline Re-Staging project. I also lead December3.club, an NSF I-Corps project building an accessible AI-powered social platform for young adults with intellectual and developmental disabilities.",
+    education: [
+      "PhD Student in Computer Science and Engineering, University of South Florida, Aug 2026 – Present",
+      "M.Eng. in Computer Engineering, University of South Florida, May 2026",
+      "B.S. in Computer Science, University of South Florida, Aug 2019 – May 2024",
+    ],
+    publications: null,
+    presentations: null,
+    role: "phd-student",
+    employment: [
+      "Graduate Research Assistant – University of South Florida (College of Education, PI: Dr. Zafer Unal), Aug 2025 – Present",
+      "Access and Integration Developer – University of South Florida, IT Services, Aug 2023 – Dec 2023",
+      "Student Body President – University of South Florida Student Government, May 2022 – Jun 2023",
+      "Deputy Chief Financial Officer – University of South Florida Student Government, Jun 2021 – May 2022",
+      "Campus Allocation and Finance Committee Chair – University of South Florida Student Government, Sep 2020 – May 2021",
+    ],
+  },
+  {
+    title: "",
     firstname: "Srikanth",
     middleinitial: "",
     lastname: "Akkaru",
